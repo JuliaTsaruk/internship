@@ -6,11 +6,9 @@
     font-size: 40px;
     text-transform: uppercase;
 }
-.main{
-    background-image: url(../internship/images/котик2.jpg);
-    height: 700px;
-    background-repeat: no-repeat;
-    background-position: center;
+.main_img{
+    display: block;
+    margin: 0 auto;
 }
 
 .footer{
