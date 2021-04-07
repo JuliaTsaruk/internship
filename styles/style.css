@@ -1,14 +1,19 @@
 body{
-    max-width: 120rem;
+    width: 120rem;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
 
 .first-section{
     height: 40.63rem;
     background: hsl(49, 100%, 50%);
-    padding-left: 16%;
-    padding-right: 10%;
+    padding-left: 18.94rem;
+    padding-right: 12.69rem;
 }
 .header{
     display: flex;
@@ -37,11 +42,6 @@ body{
     font-weight: 500;
     line-height: 1.38rem;
     list-style-type: none;
-}
-
-.header_menu li a{
-    color: #000;
-    text-decoration: none;
 }
 
 .header_menu li a:hover{
@@ -162,25 +162,25 @@ body{
     background: rgb(61, 155, 233);
     border-radius: 50%;
     top: 26rem;
-    right: 9.3rem;
+    right: 8.9rem;
 }
 
 .second-round:hover{
     width: 136px;
     height: 136px;
-    right: 8.4rem;
+    right: 7.8rem;
     top: 25rem;
     transition: 0.5s;
 }
 
 .phone_image{
     position: absolute;
-    top: 27.5rem;
-    right: 10.7rem;
+    top: 27.4rem;
+    right: 10.4rem;
 }
 
 
-@media screen and (min-width:320px){
+@media screen and (max-width:320px){
     body{
         width: 20rem;
     }
@@ -213,7 +213,7 @@ body{
     
     .menu-burger{
         display: block;
-        padding-left: 11.5rem;
+        padding-left: 10rem;
     }
     .first-section_title{
         font-size: 1.75rem;
@@ -267,8 +267,8 @@ body{
         z-index: 1;
         top: 5rem;
         left: -16.5rem;
-        width: 248px;
-        height: 396px;
+        width: 15.5rem;
+        height: 24.75rem;
     }
 
     .first-section_button{
@@ -276,7 +276,7 @@ body{
         z-index: 3;
         font-size: 1.25rem;
         line-height: 1.53rem;
-        width: 18rem;
+        width: 17rem;
     }
 
 }
