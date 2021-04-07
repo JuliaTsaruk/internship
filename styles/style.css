@@ -1,5 +1,5 @@
 body{
-    width: 120rem;
+    max-width: 120rem;
     margin: 0 auto;
     font-family: 'Montserrat', sans-serif;
 }
@@ -56,6 +56,10 @@ body{
     padding-top: 1rem;
 }
 
+.menu-burger{
+    display: none;
+}
+
 .first-section_main-part{
     display: flex;
     position: relative;
@@ -66,14 +70,20 @@ body{
     width: 31.25rem;
     font-weight: 700;
     padding: 5rem 0 1rem 0;
-    
+    color: #333333;
 }
 
 .first-section_article{
     font-weight: 600;
     font-size: 1.85rem;
     padding-bottom: 3rem;
+    color: #333333;
 }
+
+.first-section_article2{
+    display: none;
+}
+
 .first-section_button{
     position: relative;
     background: #FF352B;
@@ -167,4 +177,106 @@ body{
     position: absolute;
     top: 27.5rem;
     right: 10.7rem;
+}
+
+
+@media screen and (min-width:320px){
+    body{
+        width: 20rem;
+    }
+
+    .first-section{
+        background: hsl(49, 100%, 50%);
+        padding-left: 0.8rem;
+        height: 37.44rem;
+    }
+
+    .header{
+        padding-top: 1.9rem;
+    }
+
+    .header_logo{
+        font-size: 1rem;
+        line-height: 1.22rem;
+        text-transform: uppercase;
+        margin-right: 0;
+        padding-top: 0;
+    }
+
+    .header_menu{
+        display: none;
+    }
+    
+    .header_number{
+        display: none;
+    }
+    
+    .menu-burger{
+        display: block;
+        padding-left: 11.5rem;
+    }
+    .first-section_title{
+        font-size: 1.75rem;
+        width: 12rem;
+        font-weight: 700;
+        padding: 1rem 0 0 3rem;
+        text-align: center;
+        line-height: 2.4rem;
+    }
+
+    .first-section_article{
+        display: none;
+    }
+
+    .first-section_article2{
+        display: block;
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+        font-weight: 600;
+        color: #333333;
+        padding: 0.1rem 0 0 2.6rem;
+    }
+
+    .first-section_advantages{
+        display: none;
+    }
+
+    .button_second-border{
+        display: none;
+    }
+
+    .car_image{
+        display: none;
+    }
+
+    .first-round{
+        display: none;
+    }
+
+    .second-round{
+        display: none;
+    }
+
+    .phone_image{
+        display: none;
+    }
+
+    .man_image{
+        margin-left: 0.5rem;
+        position: relative;
+        z-index: 1;
+        top: 5rem;
+        left: -16.5rem;
+        width: 248px;
+        height: 396px;
+    }
+
+    .first-section_button{
+        top: 21rem;
+        z-index: 3;
+        font-size: 1.25rem;
+        line-height: 1.53rem;
+        width: 18rem;
+    }
+
 }
