@@ -1,3 +1,170 @@
 body{
-    width: 1920px;
+    width: 120rem;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first-section{
+    height: 40.63rem;
+    background: hsl(49, 100%, 50%);
+    padding-left: 16%;
+    padding-right: 10%;
+}
+.header{
+    display: flex;
+    padding-top: 2rem;
+}
+.header_logo{
+    font-size: 1.88rem;
+    font-weight: 600;
+    line-height: 2.31rem;
+    text-transform: uppercase;
+    margin-right: 19.5rem;
+    padding-top: 0.5rem;
+}
+
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 28.75rem;
+    margin-right: 13.5rem;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+.header_menu li{
+    font-size: 1.13rem;
+    font-weight: 500;
+    line-height: 1.38rem;
+    list-style-type: none;
+}
+
+.header_menu li a{
+    color: #000;
+    text-decoration: none;
+}
+
+.header_menu li a:hover{
+    color: #FF352B;
+    transition: 0.5s;
+}
+
+.header_number{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    padding-top: 1rem;
+}
+
+.first-section_main-part{
+    display: flex;
+    position: relative;
+}
+
+.first-section_title{
+    font-size: 4.25rem;
+    width: 31.25rem;
+    font-weight: 700;
+    padding: 5rem 0 1rem 0;
+    
+}
+
+.first-section_article{
+    font-weight: 600;
+    font-size: 1.85rem;
+    padding-bottom: 3rem;
+}
+.first-section_button{
+    position: relative;
+    background: #FF352B;
+    width: 19rem;
+    height: 3.88rem;
+    font-size: 1.5rem;
+    line-height: 1.81rem;
+    color: #F2F2F2;
+    letter-spacing: 0.05rem;
+    z-index: 1;
+    border:none
+}
+
+.first-section_button:hover{
+    background: #FF772B;
+    transition: 0.5s;
+    box-shadow: 10px 10px 0px #F2F2F2;
+
+}
+
+.button_second-border{
+    position: absolute;
+    width: 19rem;
+    height: 3.75rem;
+    bottom: 14.2rem;
+    left: 0.5rem;
+    z-index: 0;
+    border: 2px solid #F2F2F2;
+}
+
+.first-section_advantages{
+    display: flex;
+    padding-top: 5.2rem;
+}
+
+.first-section_advantages p{
+    width: 8rem;
+}
+.first-section_advantages img{
+    padding-right: 0.5rem;
+}
+
+.first-section_images{
+    display: flex;
+}
+
+.man_image{
+    margin-left: 0.5rem;
+    position: relative;
+    z-index: 1;
+    top: -2rem;
+    left: 4.5rem;
+}
+.car_image{
+    position: absolute;
+    z-index: 0;
+    top: 6rem;
+    right: 0.1rem;
+}
+
+.first-round{
+    position: relative;
+    background: rgba(61, 155, 233, 0.3);
+    width: 136px;
+    height: 136px;
+    border-radius: 50%;
+    z-index: 0;  
+    top: 25rem;
+    left: 14rem;
+}
+
+.second-round{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: rgb(61, 155, 233);
+    border-radius: 50%;
+    top: 26rem;
+    right: 9.3rem;
+}
+
+.second-round:hover{
+    width: 136px;
+    height: 136px;
+    right: 8.4rem;
+    top: 25rem;
+    transition: 0.5s;
+}
+
+.phone_image{
+    position: absolute;
+    top: 27.5rem;
+    right: 10.7rem;
 }

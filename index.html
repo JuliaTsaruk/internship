@@ -5,40 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentoring. First project</title>
+    <link rel="stylesheet" href="/reset/reset.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css"> 
 </head>
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header_logo">movee</div>
-            <nav class="header_navigation">
-                <ul>
-                    <li>Цены</li>
-                    <li>Автопарк</li>
-                    <li>Отзывы</li>
-                    <li>Контакты</li>
-                </ul>
-            </nav>
-            <div class="header_number">8(029)-999-12-13</div>
-        </header>
-        <section class="first-section">
-            <div class="first-section_main">
-                <div class="first-section_info">
-                    <h1>Квартирные переезды</h1>
-                    <p>По Бресту и области</p>
-                    <button>Заказать</button>
+    <section class="first-section">
+            <header class="header">
+                <div class="header_logo">movee</div>
+                <nav class="header_navigation">
+                    <ul class="header_menu">
+                        <li>
+                            <a href="#"> Цены</a>
+                        </li>
+                        <li>
+                            <a href="#">Автопарк</a>
+                        </li>
+                        <li>
+                            <a href="#"> Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header_number">8(029)-999-12-13</div>
+            </header>
+            <div class="first-section_main-part">
+                <div class="first-section_main">
+                    <div class="first-section_info">
+                        <h1 class="first-section_title">Квартирные переезды</h1>
+                        <p class="first-section_article">По Бресту и области</p>
+                        <button class="first-section_button">Заказать</button>
+                        <div class="button_second-border"></div>
+                    </div>
+                    <div class="first-section_advantages">
+                        <img class="truck-img" src="/images/truck-img.png" alt="image">
+                        <p>Более 800 переездов</p>
+                        <img class="package-img" src="/images/package-img.png" alt="image">
+                        <p>Бережная упаковка</p>
+                        <img class="money-img" src="/images/money-img.png" alt="image">
+                        <p>Фиксированная цена</p>
+                    </div>
                 </div>
-                <div class="first-section_advantages">
-                    <img>
-                    <p></p>
-                    <img>
-                    <p></p>
-                    <img>
-                    <p></p>
+                <div class="first-section_images">
+                    <img class="man_image" src="/images/first-section_man.png" alt="img">
+                    <img class="car_image" src="/images/first-section_car.png" alt="img">
+                    <div class="first-round"></div>
+                    <div class="second-round"></div>
+                    <img class="phone_image" src="/images/phone-img.png">
                 </div>
             </div>
-            <div class="first-section_images"></div>
-        </section>
-    </div>
+    </section>
 </body>
 </html>
