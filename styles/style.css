@@ -23,7 +23,6 @@ a{
     font-size: 1.88rem;
     font-weight: 600;
     line-height: 2.31rem;
-    text-transform: uppercase;
     margin-right: 19.5rem;
     padding-top: 0.5rem;
 }
@@ -181,14 +180,10 @@ a{
 
 
 @media screen and (max-width:320px){
-    body{
-        width: 20rem;
-    }
-
     .first-section{
         background: hsl(49, 100%, 50%);
         padding-left: 0.8rem;
-        height: 37.44rem;
+        height: 37.5rem;
     }
 
     .header{
@@ -202,30 +197,18 @@ a{
         margin-right: 0;
         padding-top: 0;
     }
-
-    .header_menu{
-        display: none;
-    }
-    
-    .header_number{
-        display: none;
-    }
     
     .menu-burger{
         display: block;
-        padding-left: 10rem;
+        padding-left: 11.7rem;
     }
+
     .first-section_title{
         font-size: 1.75rem;
         width: 12rem;
-        font-weight: 700;
-        padding: 1rem 0 0 3rem;
+        padding: 1rem 0 0 3.3rem;
         text-align: center;
         line-height: 2.4rem;
-    }
-
-    .first-section_article{
-        display: none;
     }
 
     .first-section_article2{
@@ -237,38 +220,30 @@ a{
         padding: 0.1rem 0 0 2.6rem;
     }
 
-    .first-section_advantages{
-        display: none;
-    }
-
-    .button_second-border{
-        display: none;
-    }
-
-    .car_image{
-        display: none;
-    }
-
-    .first-round{
-        display: none;
-    }
-
-    .second-round{
-        display: none;
-    }
-
+    .header_menu,
+    .header_number,
+    .first-section_advantages,
+    .button_second-border,
+    .car_image,
+    .first-round,
+    .second-round,
+    .first-section_article,
     .phone_image{
-        display: none;
+       display: none;
     }
+
 
     .man_image{
-        margin-left: 0.5rem;
-        position: relative;
+        position: absolute;
         z-index: 1;
         top: 5rem;
-        left: -16.5rem;
+        left: 1.5rem;
         width: 15.5rem;
-        height: 24.75rem;
+
+        /* Не вышло этим способом, только если менять значения*/
+        /*top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);*/
     }
 
     .first-section_button{
@@ -276,7 +251,7 @@ a{
         z-index: 3;
         font-size: 1.25rem;
         line-height: 1.53rem;
-        width: 17rem;
+        width: 18rem;
     }
 
 }
