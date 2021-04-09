@@ -1,6 +1,5 @@
 body{
-    width: 120rem;
-    margin: 0 auto;
+    width: 100%;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -10,14 +9,13 @@ a{
 }
 
 .first-section{
-    height: 40.63rem;
-    background: hsl(49, 100%, 50%);
-    padding-left: 18.94rem;
-    padding-right: 12.69rem;
+    width: 100%;
+    padding: 2rem 19% 2.29rem 23%;
+    background: url(/images/first-section_man.png) 57.5rem 2.5rem no-repeat, url(/images/first-section_car.png) 76rem 10.5rem no-repeat;
+    background-color: hsl(49, 100%, 50%);
 }
 .header{
     display: flex;
-    padding-top: 2rem;
 }
 .header_logo{
     font-size: 1.88rem;
@@ -58,10 +56,8 @@ a{
 .menu-burger{
     display: none;
 }
-
 .first-section_main-part{
     display: flex;
-    position: relative;
 }
 
 .first-section_title{
@@ -79,12 +75,15 @@ a{
     color: #333333;
 }
 
-.first-section_article2{
+.man-image_mobile{
     display: none;
 }
-
 .first-section_button{
     position: relative;
+}
+
+.button-btn{
+    position: absolute;
     background: #FF352B;
     width: 19rem;
     height: 3.88rem;
@@ -92,36 +91,36 @@ a{
     line-height: 1.81rem;
     color: #F2F2F2;
     letter-spacing: 0.05rem;
+    border:none;
     z-index: 1;
-    border:none
 }
 
-.first-section_button:hover{
+.button-btn:hover{
     background: #FF772B;
     transition: 0.5s;
     box-shadow: 10px 10px 0px #F2F2F2;
 
 }
 
-.button_second-border{
+.button-border{
     position: absolute;
     width: 19rem;
     height: 3.75rem;
-    bottom: 14.2rem;
-    left: 0.5rem;
-    z-index: 0;
+    top: 0.7rem;
+    left: 0.4rem;
     border: 2px solid #F2F2F2;
+    z-index: 0;
 }
 
 .first-section_advantages{
     display: flex;
-    padding-top: 5.2rem;
+    padding-top: 8.5rem;
 }
 
 .first-section_advantages p{
     width: 8rem;
 }
-.first-section_advantages img{
+.advantages_img{
     padding-right: 0.5rem;
 }
 
@@ -129,71 +128,54 @@ a{
     display: flex;
 }
 
-.man_image{
-    margin-left: 0.5rem;
-    position: relative;
-    z-index: 1;
-    top: -2rem;
-    left: 4.5rem;
-}
-.car_image{
-    position: absolute;
-    z-index: 0;
-    top: 6rem;
-    right: 0.1rem;
-}
 
-.first-round{
-    position: relative;
-    background: rgba(61, 155, 233, 0.3);
-    width: 136px;
-    height: 136px;
+.phone-btn{
+    width: 8.5rem;
+    height: 8.5rem;
     border-radius: 50%;
-    z-index: 0;  
-    top: 25rem;
-    left: 14rem;
+    background-color: rgba(61, 155, 233, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25rem 0 0 38rem;
 }
 
-.second-round{
-    position: absolute;
-    width: 100px;
-    height: 100px;
+.phone-btn_link{
+    display: block;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
     background: rgb(61, 155, 233);
-    border-radius: 50%;
-    top: 26rem;
-    right: 8.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-.second-round:hover{
-    width: 136px;
-    height: 136px;
-    right: 7.8rem;
-    top: 25rem;
+.phone-btn_link::after{
+    content: url(/images/phone-img.png);
+}
+
+.phone-btn_link:hover {
+    width: 100%;
+    height: 100%;
     transition: 0.5s;
-}
+    background-color: #3d9be9;
+  }
 
-.phone_image{
-    position: absolute;
-    top: 27.4rem;
-    right: 10.4rem;
-}
 
 
 @media screen and (max-width:320px){
     .first-section{
-        background: hsl(49, 100%, 50%);
-        padding-left: 0.8rem;
-        height: 37.5rem;
-    }
-
-    .header{
-        padding-top: 1.9rem;
+        padding: 1.9rem 0 0 0.8rem;
+        background-position: 2rem 5rem;
+        background: none;
+        background-color: hsl(49, 100%, 50%);
     }
 
     .header_logo{
         font-size: 1rem;
         line-height: 1.22rem;
-        text-transform: uppercase;
         margin-right: 0;
         padding-top: 0;
     }
@@ -211,47 +193,31 @@ a{
         line-height: 2.4rem;
     }
 
-    .first-section_article2{
-        display: block;
+    .first-section_article{
         font-size: 1.13rem;
         line-height: 1.38rem;
-        font-weight: 600;
-        color: #333333;
         padding: 0.1rem 0 0 2.6rem;
     }
-
+    
+    .man-image_mobile{
+        display: block;
+        margin: -2.5rem 0 -1.7rem 2rem;
+    
+    }
     .header_menu,
     .header_number,
     .first-section_advantages,
-    .button_second-border,
-    .car_image,
-    .first-round,
-    .second-round,
-    .first-section_article,
-    .phone_image{
+    .button-border,
+    .phone-btn{
        display: none;
     }
 
-
-    .man_image{
-        position: absolute;
-        z-index: 1;
-        top: 5rem;
-        left: 1.5rem;
-        width: 15.5rem;
-
-        /* Не вышло этим способом, только если менять значения*/
-        /*top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);*/
-    }
-
-    .first-section_button{
-        top: 21rem;
-        z-index: 3;
+    .button-btn{
+        position: static;
         font-size: 1.25rem;
         line-height: 1.53rem;
         width: 18rem;
+        margin-bottom: 2.5rem;
     }
 
 }
