@@ -1,11 +1,19 @@
 body{
     width: 100%;
     font-family: 'Montserrat', sans-serif;
+    color: #333333;
 }
 
 a{
     text-decoration: none;
-    color: #000;
+    color: #333333;;
+}
+
+.heading{
+    font-size: 1.88rem;
+    line-height: 2.29rem;
+    font-weight: 600;
+
 }
 
 .first-section{
@@ -65,14 +73,12 @@ a{
     width: 31.25rem;
     font-weight: 700;
     padding: 5rem 0 1rem 0;
-    color: #333333;
 }
 
 .first-section_article{
     font-weight: 600;
     font-size: 1.85rem;
     padding-bottom: 3rem;
-    color: #333333;
 }
 
 .man-image_mobile{
@@ -162,8 +168,6 @@ a{
     transition: 0.5s;
     background-color: #3d9be9;
   }
-
-
 
 @media screen and (max-width:320px){
     .first-section{
