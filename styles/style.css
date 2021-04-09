@@ -1,24 +1,227 @@
-
-.title{
-    color: rgb(168, 94, 131);
-    text-align: center;
-    font-family: 'Londrina Solid', cursive;
-    font-size: 40px;
-    text-transform: uppercase;
-}
-.main_img{
-    display: block;
-    margin: 0 auto;
-    max-width: 1000px;   
+body{
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
 }
 
-.footer{
+a{
+    text-decoration: none;
+    color: #333333;;
+}
+
+.heading{
+    font-size: 1.88rem;
+    line-height: 2.29rem;
+    font-weight: 600;
+
+}
+
+.first-section{
+    width: 100%;
+    padding: 2rem 19% 2.29rem 23%;
+    background: url(/images/first-section_man.png) 57.5rem 2.5rem no-repeat, url(/images/first-section_car.png) 76rem 10.5rem no-repeat;
+    background-color: hsl(49, 100%, 50%);
+}
+.header{
     display: flex;
-    justify-content: center;
-    color: rgb(44, 42, 42);
+}
+.header_logo{
+    font-size: 1.88rem;
+    font-weight: 600;
+    line-height: 2.31rem;
+    margin-right: 19.5rem;
+    padding-top: 0.5rem;
 }
 
-.footer_image{
-    width: 61px;
-    height: 61px;
+.header_menu{
+    display: flex;
+    justify-content: space-between;
+    width: 28.75rem;
+    margin-right: 13.5rem;
+    padding-top: 1rem;
+    position: relative;
+    z-index: 2;
+}
+.header_menu li{
+    font-size: 1.13rem;
+    font-weight: 500;
+    line-height: 1.38rem;
+    list-style-type: none;
+}
+
+.header_menu li a:hover{
+    color: #FF352B;
+    transition: 0.5s;
+}
+
+.header_number{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.8rem;
+    padding-top: 1rem;
+}
+
+.menu-burger{
+    display: none;
+}
+.first-section_main-part{
+    display: flex;
+}
+
+.first-section_title{
+    font-size: 4.25rem;
+    width: 31.25rem;
+    font-weight: 700;
+    padding: 5rem 0 1rem 0;
+}
+
+.first-section_article{
+    font-weight: 600;
+    font-size: 1.85rem;
+    padding-bottom: 3rem;
+}
+
+.man-image_mobile{
+    display: none;
+}
+.first-section_button{
+    position: relative;
+}
+
+.button-btn{
+    position: absolute;
+    background: #FF352B;
+    width: 19rem;
+    height: 3.88rem;
+    font-size: 1.5rem;
+    line-height: 1.81rem;
+    color: #F2F2F2;
+    letter-spacing: 0.05rem;
+    border:none;
+    z-index: 1;
+}
+
+.button-btn:hover{
+    background: #FF772B;
+    transition: 0.5s;
+    box-shadow: 10px 10px 0px #F2F2F2;
+
+}
+
+.button-border{
+    position: absolute;
+    width: 19rem;
+    height: 3.75rem;
+    top: 0.7rem;
+    left: 0.4rem;
+    border: 2px solid #F2F2F2;
+    z-index: 0;
+}
+
+.first-section_advantages{
+    display: flex;
+    padding-top: 8.5rem;
+}
+
+.first-section_advantages p{
+    width: 8rem;
+}
+.advantages_img{
+    padding-right: 0.5rem;
+}
+
+.first-section_images{
+    display: flex;
+}
+
+
+.phone-btn{
+    width: 8.5rem;
+    height: 8.5rem;
+    border-radius: 50%;
+    background-color: rgba(61, 155, 233, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 25rem 0 0 38rem;
+}
+
+.phone-btn_link{
+    display: block;
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    background: rgb(61, 155, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.phone-btn_link::after{
+    content: url(/images/phone-img.png);
+}
+
+.phone-btn_link:hover {
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    background-color: #3d9be9;
+  }
+
+@media screen and (max-width:320px){
+    .first-section{
+        padding: 1.9rem 0 0 0.8rem;
+        background-position: 2rem 5rem;
+        background: none;
+        background-color: hsl(49, 100%, 50%);
+    }
+
+    .header_logo{
+        font-size: 1rem;
+        line-height: 1.22rem;
+        margin-right: 0;
+        padding-top: 0;
+    }
+    
+    .menu-burger{
+        display: block;
+        padding-left: 11.7rem;
+    }
+
+    .first-section_title{
+        font-size: 1.75rem;
+        width: 12rem;
+        padding: 1rem 0 0 3.3rem;
+        text-align: center;
+        line-height: 2.4rem;
+    }
+
+    .first-section_article{
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+        padding: 0.1rem 0 0 2.6rem;
+    }
+    
+    .man-image_mobile{
+        display: block;
+        margin: -2.5rem 0 -1.7rem 2rem;
+    
+    }
+    .header_menu,
+    .header_number,
+    .first-section_advantages,
+    .button-border,
+    .phone-btn{
+       display: none;
+    }
+
+    .button-btn{
+        position: static;
+        font-size: 1.25rem;
+        line-height: 1.53rem;
+        width: 18rem;
+        margin-bottom: 2.5rem;
+    }
+
 }
