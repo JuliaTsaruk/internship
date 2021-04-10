@@ -169,6 +169,49 @@ a{
     background-color: #3d9be9;
   }
 
+  /* how-it-works section*/
+
+  .how-it-works{
+    width: 100%;
+    padding-top: 5.9rem;
+}
+
+.how-it-works__title{
+    margin: 0 0 4.13rem 24rem;
+}
+
+.how-it-works__list{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.how-it-works__list ol{
+  counter-reset: my-counter;
+  display: flex;
+}
+
+.how-it-works__list ol li{
+    counter-increment: my-counter;
+    width: 50%;
+}
+
+.how-it-works__list ol li::before{
+    content: "0" counter(my-counter);
+    font-size: 3.13rem;
+    line-height: 3.81rem;
+    text-shadow: 0.05rem 0.05rem 0 #FED100;
+}
+
+.list__title{
+    font-size: 1.25rem;
+    line-height: 1.52rem;
+    font-weight: 500;
+}
+
+.list__info{
+    line-height: 1.31rem;
+}
+
 @media screen and (max-width:320px){
     .first-section{
         padding: 1.9rem 0 0 0.8rem;
