@@ -13,16 +13,29 @@ a{
     font-size: 1.88rem;
     line-height: 2.29rem;
     font-weight: 600;
+}
 
+.small-heading{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.81rem;
+}
+
+.font{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
 }
 
 .first-section{
     width: 100%;
-    padding: 2rem 19% 2.29rem 23%;
+    padding: 2rem 1.5rem 2.29rem 2rem;
     background: url(/images/first-section_man.png) 57.5rem 2.5rem no-repeat, url(/images/first-section_car.png) 76rem 10.5rem no-repeat;
     background-color: hsl(49, 100%, 50%);
 }
 .header{
+    width: 71%;
+    margin: 0 auto;
     display: flex;
 }
 .header_logo{
@@ -65,6 +78,8 @@ a{
     display: none;
 }
 .first-section_main-part{
+    width: 71%;
+    margin: 0 auto;
     display: flex;
 }
 
@@ -173,26 +188,29 @@ a{
 
   .how-it-works{
     width: 100%;
-    padding-top: 5.9rem;
+    padding: 6rem 0 3.4rem 0;
 }
 
 .how-it-works__title{
-    margin: 0 0 4.13rem 24rem;
+    text-align: center;
+    padding-bottom: 4rem;
 }
 
 .how-it-works__list{
-    width: 80%;
+    width: 65%;
     margin: 0 auto;
 }
 
 .how-it-works__list ol{
   counter-reset: my-counter;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .how-it-works__list ol li{
     counter-increment: my-counter;
     width: 50%;
+    display: flex;
 }
 
 .how-it-works__list ol li::before{
@@ -200,16 +218,97 @@ a{
     font-size: 3.13rem;
     line-height: 3.81rem;
     text-shadow: 0.05rem 0.05rem 0 #FED100;
-}
-
-.list__title{
-    font-size: 1.25rem;
-    line-height: 1.52rem;
-    font-weight: 500;
+    margin-left: 5rem;
 }
 
 .list__info{
+    padding: 0.3rem 0 0 2.7rem;
+    margin-bottom: 3.3rem;
+}
+
+
+.list__article{
     line-height: 1.31rem;
+    padding-top: 1rem;
+    width: 24rem;
+}
+
+/*section prices*/  
+.prices{
+    margin-bottom: 6.3rem;
+}
+
+.prices__title{
+    text-align: center;
+    padding-bottom: 0.7rem;
+}
+
+.prices__article{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.prices__cards{
+    display: flex;
+    margin: 0px 14rem 0 19rem;
+}
+
+.cards__info{
+    width: 33.33%;
+    border: 1px solid #EBEBEB;
+    margin-right: 1.44rem;
+    padding: 5rem 0 0 0;
+}
+
+.cards__info:hover{
+    border-color: #FED100;
+}
+
+.cards__title{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.cards__info p{
+    font-size: 1rem;
+    line-height: 1.31rem;
+    text-align: center;
+    padding-bottom: 1.8rem;
+}
+
+.cards__service-cost{
+    display: block;
+    text-align: center;
+    padding-top: 2.2rem;
+}
+
+.cards__button{
+    width: 250px;
+    height: 50px;
+    background: #FED100;
+    margin: 3.5rem 0 5rem 5.2rem;
+}
+
+.cards__button:hover{
+    box-shadow: 0px 4px 24px #FED100;
+    color: #FFFFFF;
+}
+
+.car-park__title{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.car-park__article{
+    text-align: center;
+}
+
+.car-park__types{
+    display: flex;
+    margin: 0 auto;
+}
+
+.types__cars{
+    border: 1px solid #EBEBEB;
 }
 
 @media screen and (max-width:320px){
