@@ -239,6 +239,10 @@ a{
     width: 24rem;
 }
 
+.list__title-mob{
+    display: none;
+}
+
 /*section prices*/  
 .prices{
     margin-bottom: 6.3rem;
@@ -297,6 +301,12 @@ a{
     color: #FFFFFF;
 }
 
+.prices__all-prices{
+    display: none;
+}
+
+/*car-park section*/
+
 .car-park__title{
     text-align: center;
     padding-bottom: 1rem;
@@ -352,6 +362,12 @@ a{
     margin-right: 6.4rem;
 }
 
+.slider__car-description-mob,
+.slider__choice-mob,
+.slider__button-mob{
+    display: none;
+}
+
 /*feedbacks section*/
 .feedbacks{
     background: #FED100;
@@ -403,16 +419,17 @@ a{
 
 @media screen and (max-width:320px){
     .first-section{
-        padding: 1.9rem 0 0 0.8rem;
-        background-position: 2rem 5rem;
+        padding: 0;
+        padding-top: 1.75rem;
         background: none;
         background-color: hsl(49, 100%, 50%);
+        
     }
 
     .header_logo{
         font-size: 1rem;
         line-height: 1.22rem;
-        margin-right: 0;
+        margin: 0 0 0 -2rem;
         padding-top: 0;
     }
     
@@ -424,7 +441,7 @@ a{
     .first-section_title{
         font-size: 1.75rem;
         width: 12rem;
-        padding: 1rem 0 0 3.3rem;
+        padding: 1rem 0 0 1.3rem;
         text-align: center;
         line-height: 2.4rem;
     }
@@ -432,18 +449,19 @@ a{
     .first-section_article{
         font-size: 1.13rem;
         line-height: 1.38rem;
-        padding: 0.1rem 0 0 2.6rem;
+        padding-left: 0.8rem;
     }
     
     .man-image_mobile{
         display: block;
-        margin: -2.5rem 0 -1.7rem 2rem;
+        margin: -5.1rem 0 -1.7rem 0;
     
     }
     .header_menu,
     .header_number,
     .first-section_advantages,
     .button-border,
+    .list__article,
     .phone-btn{
        display: none;
     }
@@ -453,7 +471,213 @@ a{
         font-size: 1.25rem;
         line-height: 1.53rem;
         width: 18rem;
-        margin-bottom: 2.5rem;
+        margin: 0 0 2.5rem -2rem;
     }
+
+    /*how-it-works section*/
+
+    .how-it-works{
+        padding: 0;
+        padding-top: 2.5rem;
+    }
+
+    .how-it-works__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+
+    .how-it-works__list{
+        width: 100%;
+        margin-left: 2.8rem;
+    }
+
+    .how-it-works__list ol{
+        display: block;
+    }
+
+    .how-it-works__list ol li{
+        width: 100%;
+        margin-bottom: -0.3rem;
+    }
+
+    .how-it-works__list ol li::before{
+        margin: 0;
+    }
+
+    .list__info{
+        padding: 0.3rem 0.1rem 0 1.8rem;
+    }
+
+    .list__title{
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .list__title-desk{
+        display: none;
+    }
+
+    .list__title-mob{
+        display: inline;
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    /*prices*/
+
+    .prices{
+        margin: 3.5rem 0 5.7rem 1rem;
+    }
+
+    .prices__article,
+    .cards__info:first-child,
+    .cards__info:last-child{
+        display: none;
+    }
+
+    .prices__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .prices__cards{
+        margin: 0;
+        width: 100%;
+    }
+
+    .cards__info{
+        width: 100%;
+        padding-top: 1.7rem;
+        border: none;
+    }
+
+    .cards__info p{
+        padding-bottom: 1rem;
+    }
+
+    .cards__title{
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .cards__button{
+        margin: 3rem 0 1rem 0;
+        width: 18.25rem;
+        height: 3.75rem;
+    }
+
+    .prices__all-prices{
+        display: block;
+        text-decoration: underline;
+        line-height: 1.31rem;
+        text-align: center;
+    }
+    
+    /*car-park section*/
+
+    .car-park__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .car-park__article,
+    .slider__direction,
+    .slider__car-info{
+        display: none;
+    }
+
+    .car-park__types{
+        margin: 0 0 0 0.8rem;
+    }
+
+    .car-park__types:active{
+        border-bottom: #FED100;
+    }
+
+    .types__cars{
+        font-size: 1rem;
+        line-height: 1.25rem;
+        padding-bottom: 1rem;
+        border: none;
+    }
+
+    .car-park__slider{
+        margin: 0;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .slider__car-image{
+        height: 14.19rem;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+    .slider__car-description-mob{
+        display: block;
+        font-size: 0.75rem;
+        line-height: 0.94rem;
+        padding: 1.8rem 0 2rem 5rem;
+    }
+
+    .slider__choice-mob{
+        display: block;
+        margin: 0 0 1.7rem 6.7rem;
+    }
+
+    .slider__button-mob{
+        display: block;
+        margin-left: 1rem;
+        width: 18.25rem;
+        height: 3.75rem;
+    }
+
+    /*feedbacks section*/
+
+    .feedbacks__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding: 2.5rem 0 2.6rem 0;
+    }
+
+    .clients__feedback-card:first-child,
+    .clients__feedback-card:last-child{
+        display: none;
+    }
+
+    .feedbacks__clients{
+        padding: 0;
+    }
+
+    .clients__feedback-card:nth-child(2){
+        font-size: 1rem;
+        line-height: 1.31rem;
+        width: 100%;
+        padding-left: 0.7rem;
+    }
+
+    .clients__feedback-card p{
+        margin: 2.3rem 0 0.3rem 0;
+    }
+
+    .clients__name{
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+    }
+
+    .feedbacks__button{
+        margin: 2.8rem 0 3rem 0.9rem;
+        width: 18.25rem;
+        height: 3.75rem;
+    }
+
+
+  
+
+
+
 
 }
