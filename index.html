@@ -97,7 +97,7 @@
                 <p>2 грузчика</p>
                 <p>Переезд за 4 часа</p>
                 <span class="cards__service-cost heading"> 70 руб. </span>
-                <button class="cards__button font">Заказать</button>
+                <button class="cards__button btn font">Заказать</button>
             </div>
             <div class="cards__info">
                 <h4 class="cards__title small-heading">2-комнатная кв-ра  </h4>
@@ -105,7 +105,7 @@
                 <p>2 грузчика</p>
                 <p>Переезд за 4 часа</p>
                 <span class="cards__service-cost heading"> 100 руб.</span>
-                <button class="cards__button font">Заказать</button>
+                <button class="cards__button btn font">Заказать</button>
             </div>
             <div class="cards__info">
                 <h4 class="cards__title small-heading">3-комнатная кв-ра  </h4>
@@ -113,7 +113,7 @@
                 <p>2 грузчика</p>
                 <p>Переезд за 6 часов</p>
                 <span class="cards__service-cost heading"> 150 руб. </span>
-                <button class="cards__button font">Заказать</button>
+                <button class="cards__button btn font">Заказать</button>
             </div>
         </div>
     </section>
@@ -125,21 +125,61 @@
             <div class="types__cars font">Каблуки</div>
             <div class="types__cars font">Грузовики</div>
         </div>
-        <div>
-            <img src="/images/car-park_left.png" alt="image">
-            <div>
-                <h3>Газель 3 метра </h3>
-                <ul>
+        <div  class="car-park__slider">
+            <div class="slider__direction">
+                <img src="/images/car-park_left.png" alt="image">
+            </div>
+            <div class="slider__car-info">
+                <h3 class="slider__car-title small-heading">Газель 3 метра </h3>
+                <ul class="slider__car-list">
                     <li>Ширина 2 м</li>
                     <li>Высота 2 м</li>
                     <li>Объем 16 м³</li>
                     <li>Грузоподъемность 1,5 т</li>
-                    <button>Заказать</button>
+                    <button class="slider__oder-button btn font">Заказать</button>
                 </ul>
             </div>
-            <img src="/images/car-park_car.png" alt="image">
-            <img src="/images/car-park_right.png" alt="image">
+            <img class="slider__car-image" src="/images/car-park_car.png" alt="image">
+            <div class="slider__direction">
+                <img src="/images/car-park_right.png" alt="image">
+            </div>
         </div>
+    </section>
+    <section class="feedbacks">
+        <h2 class="feedbacks__title heading">Отзывы</h2>
+        <div class="feedbacks__clients">
+            <div  class="clients__feedback-card">
+                <h3 class="clients__name small-heading">Ирина</h3>
+                <div>
+                    <span>24.03.2019</span>
+                    <img src="/images/feedbacks__stars.png">
+                </div>
+                <p class="clients__feedback-info">Обращение к вам за помощью в переезде оставило только положительные впечатления. Хотелось отметить замечательного водителя газели Алексея. Были трудности с заездом 
+                    во двор, он проявил себя как компетентный и профессиональный сотрудник, за что ему огромное...  </p>
+                <span class="clients__feedback-continue">Читать полностью </span>
+            </div>
+            <div class="clients__feedback-card">
+                <h3 class="clients__name small-heading">Светлана Васильевна </h3>
+                <div>
+                    <span>13.09.2019</span>
+                    <img src="/images/feedbacks__stars.png">
+                </div>
+                <p class="clients__feedback-info">Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны, несмотря на то, что к нам опоздали на 1,5 часа. Морально были к этому готовы ( в прошлый переезд в другой 
+                    фирме тоже опоздали на час).  Водитель заранее позвонил, предупредил, что задерживается. Когда....</p>
+                <span class="clients__feedback-continue">Читать полностью </span>
+            </div>
+            <div class="clients__feedback-card">
+                <h3 class="clients__name small-heading">Ольга Петрова</h3>
+                <div>
+                    <span>11.11.2019</span>
+                    <img src="/images/feedbacks__stars.png">
+                </div>
+                <p class="clients__feedback-info">Могу на 100% порекомендовать компанию MOVEE и отметить, что цены фиксированы, что упрощает расчет. Безо всяких заморочек, в отличии от их конкурентов. Упаковали все 
+                    качественно и быстро. Все вещи приехали в сохранности. Особлая благодарность Александру за его...</p>
+                <span class="clients__feedback-continue">Читать полностью </span>
+            </div>
+        </div>
+        <button class="feedbacks__button btn font">Все отзывы</button>
     </section>
 </body>
 </html>
