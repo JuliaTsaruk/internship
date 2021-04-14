@@ -1,7 +1,12 @@
 body{
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
     color: #333333;
+    width: 1920px;
+}
+
+.container{
+    max-width: 1306px;
+    margin: 0 auto;
 }
 
 a{
@@ -30,25 +35,26 @@ a{
 .btn{
     width: 250px;
     height: 50px;
-    background: #FED100;
+    background-color: #FED100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .first-section{
-    width: 100%;
-    padding: 2rem 1.5rem 2.29rem 2rem;
+    padding: 2rem 0 2.29rem 0;
     background: url(/images/first-section_man.png) 57.5rem 2.5rem no-repeat, url(/images/first-section_car.png) 76rem 10.5rem no-repeat;
     background-color: hsl(49, 100%, 50%);
 }
 .header{
-    width: 71%;
-    margin: 0 auto;
     display: flex;
+    justify-content: space-between;
 }
 .header_logo{
     font-size: 1.88rem;
     font-weight: 600;
     line-height: 2.31rem;
-    margin-right: 19.5rem;
     padding-top: 0.5rem;
 }
 
@@ -56,10 +62,7 @@ a{
     display: flex;
     justify-content: space-between;
     width: 28.75rem;
-    margin-right: 13.5rem;
-    padding-top: 1rem;
-    position: relative;
-    z-index: 2;
+    padding: 1rem 0 0 5.3rem;
 }
 .header_menu li{
     font-size: 1.13rem;
@@ -83,9 +86,8 @@ a{
 .menu-burger{
     display: none;
 }
+
 .first-section_main-part{
-    width: 71%;
-    margin: 0 auto;
     display: flex;
 }
 
@@ -193,7 +195,6 @@ a{
   /* how-it-works section*/
 
   .how-it-works{
-    width: 100%;
     padding: 6rem 0 3.4rem 0;
 }
 
@@ -203,37 +204,29 @@ a{
 }
 
 .how-it-works__list{
-    width: 65%;
-    margin: 0 auto;
-}
-
-.how-it-works__list ol{
-  counter-reset: my-counter;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.how-it-works__list ol li{
-    counter-increment: my-counter;
-    width: 50%;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.how-it-works__list ol li::before{
-    content: "0" counter(my-counter);
+.how-it-works__list-item{
+    display: flex;
+    width: 47%;
+}
+
+.list-item__numbers{
     font-size: 3.13rem;
     line-height: 3.81rem;
     text-shadow: 0.05rem 0.05rem 0 #FED100;
-    margin-left: 5rem;
+    margin-left: 6rem;
 }
 
-.list__info{
-    padding: 0.3rem 0 0 2.7rem;
+.how-it-works__list-info{
+    padding: 0.3rem 0 0 2.4rem;
     margin-bottom: 3.3rem;
 }
 
 
-.list__article{
+.list-info__article{
     line-height: 1.31rem;
     padding-top: 1rem;
     width: 24rem;
@@ -245,7 +238,7 @@ a{
 
 /*section prices*/  
 .prices{
-    margin-bottom: 6.3rem;
+    margin-bottom: 6rem;
 }
 
 .prices__title{
@@ -260,14 +253,16 @@ a{
 
 .prices__cards{
     display: flex;
-    margin: 0px 14rem 0 19rem;
 }
 
 .cards__info{
-    width: 33.33%;
+    width: 32%;
     border: 1px solid #EBEBEB;
-    margin-right: 1.44rem;
     padding: 5rem 0 0 0;
+}
+
+.cards__info:not(:last-child){
+    margin-right: 1.5rem;
 }
 
 .cards__info:hover{
@@ -286,10 +281,18 @@ a{
     padding-bottom: 1.8rem;
 }
 
+.cards__info ul{
+    text-align: center;
+}
+
+.cards__info ul li{
+    padding-bottom: 2.2rem;
+}
+
 .cards__service-cost{
     display: block;
     text-align: center;
-    padding-top: 2.2rem;
+    padding-top: 2rem;
 }
 
 .cards__button{
@@ -317,7 +320,8 @@ a{
 
 .car-park__types{
     display: flex;
-    margin: 3.8rem 0 3rem 38rem;
+    justify-content: center;
+    padding: 3.7rem 0 3rem 1rem;
 }
 
 .types__cars{
@@ -331,16 +335,13 @@ a{
 
 .car-park__slider{
     display: flex;
-    margin-left:22rem;
+    padding-left: 3rem;
 }
+
 
 .slider__direction{
-    display: flex;
-    justify-content: center;
-}
-
-.slider__direction img{
     align-self: center;
+    padding-bottom: 4rem;
 }
 .slider__car-info{
     margin:3rem 7rem 0 6rem;
@@ -362,18 +363,22 @@ a{
     margin-right: 6.4rem;
 }
 
+.slider__order-button{
+    margin-top: 0.5rem;
+}
+
 .slider__car-description-mob,
-.slider__choice-mob,
+.slider__dots,
 .slider__button-mob{
     display: none;
 }
 
 /*feedbacks section*/
 .feedbacks{
-    background: #FED100;
-    padding-right: 4rem;
-    margin-top: 2.7rem;
     width: 100%;
+    background: #FED100;
+    padding:0 4rem 6rem 0;
+    margin-top: 2.7rem;
 }
 
 .feedbacks__title{
@@ -382,13 +387,11 @@ a{
 }
 .feedbacks__clients{
     display: flex;
-    justify-content: center;
-    padding: 3.8rem 0 3.9rem 4.5rem;
+    padding: 3.8rem 0 3.9rem 0;
 }
 
-.clients__feedback-card{
-    width: 23%;
-    margin-right: 1.5rem;
+.clients__feedback-card:not(:last-child){
+    margin-right: 1.8rem;
 }
 
 
@@ -407,7 +410,6 @@ a{
 
 .feedbacks__button{
     border: 1px solid #333333;
-    margin: 0 0 6rem 52rem;
 }
 
 .feedbacks__button:hover{
@@ -623,9 +625,10 @@ a{
         padding: 1.8rem 0 2rem 5rem;
     }
 
-    .slider__choice-mob{
+    .slider__dots{
         display: block;
-        margin: 0 0 1.7rem 6.7rem;
+        border-radius: 50%;
+        background-color: #333333;
     }
 
     .slider__button-mob{
