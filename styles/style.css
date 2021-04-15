@@ -415,7 +415,7 @@ a{
 }
 
 .feedbacks__button:hover{
-    background: #FFFFFF;
+    background-color: #FFFFFF;
     font-weight: bold;
     border: none;
     transition: 0.5s;
