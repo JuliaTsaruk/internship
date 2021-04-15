@@ -62,21 +62,21 @@
         <div class="container">
             <h2 class="how-it-works__title heading">Как это происходит?</h2>
             <div class="how-it-works__list">
-                <div class="how-it-works__list-item">
+                <div class="how-it-works__list-item number-1">
                     <p class="list-item__numbers">01</p>
                         <div class="how-it-works__list-info">
                             <span  class="list-info__title font">Оценка объема предстоящих работ</span>
                             <p class="list-info__article">Стоимость переезда зависит от количества комнат, вещей и мебели. </p>
                         </div>
                 </div>
-                <div class="how-it-works__list-item">
+                <div class="how-it-works__list-item number-2">
                     <p class="list-item__numbers">02</p>
                     <div class="how-it-works__list-info"> 
                         <span class="list-info__title font">Упаковка вещей</span>
                         <p class="list-info__article">Упаковываем вещи в коробки, подписываем. Габаритное и деликатное,  упаковываем отдельно.</p>
                     </div>
                 </div>
-                <div class="how-it-works__list-item">
+                <div class="how-it-works__list-item number-3">
                     <p class="list-item__numbers">03</p>
                         <div class="how-it-works__list-info">
                             <span class="list-info__title list__title-desk font"> Погрузка и транспортировка вещей</span>
@@ -84,12 +84,12 @@
                             <p class="list-info__article">В нашем автопарке имеются машины, подходящие для мебели любых габаритов. </p>
                         </div>
                 </div>
-                <div class="how-it-works__list-item">
+                <div class="how-it-works__list-item number-4">
                     <p class="list-item__numbers">04</p>
-                        <div class="how-it-works__list-info">
-                            <span class="list-info__title font">Распаковка и расстановка мебели</span>
-                            <p class="list-info__article">Опытные грузчики быстро расставят мебель и уберут мусор от распаковки.</p>
-                        </div>
+                    <div class="how-it-works__list-info">
+                        <span class="list-info__title font">Распаковка и расстановка мебели</span>
+                        <p class="list-info__article">Опытные грузчики быстро расставят мебель и уберут мусор от распаковки.</p>
+                    </div>
                 </div> 
             </div>
         </div>
@@ -101,7 +101,7 @@
         <div class="prices__cards">
             <div class="cards__info">
                 <h4 class="cards__title small-heading">1-комнатная кв-ра </h4>
-                <ul>
+                <ul class="cards__details">
                     <li>1 фургон</li>
                     <li>2 грузчика</li>
                     <li>Переезд за 4 часа</li>
@@ -110,7 +110,7 @@
             </div>
             <div class="cards__info">
                 <h4 class="cards__title small-heading">2-комнатная кв-ра  </h4>
-                <ul>
+                <ul class="cards__details">
                     <li>1 газель - 3 метра</li>
                     <li>2 грузчика</li>
                     <li>Переезд за 4 часа</li>
@@ -120,7 +120,7 @@
             </div>
             <div class="cards__info">
                 <h4 class="cards__title small-heading">3-комнатная кв-ра</h4>
-                <ul>
+                <ul class="cards__details">
                     <li>1 газель - 4 метра</li>
                     <li>2 грузчика</li>
                     <li>Переезд за 6 часов</li>
@@ -156,11 +156,13 @@
                 </div>
                 <img class="slider__car-image" src="/images/car-park_car.png" alt="image">
                 <p class="slider__car-description-mob">Газель 3 метра / 1,5 тонны </p>
-                <span class="slider__dots"></span>
-                <span class="slider__dots"></span>
-                <span class="slider__dots"></span>
-                <span class="slider__dots"></span>
-                <span class="slider__dots"></span>
+                <div class="slider__dots-choice">
+                    <span class="slider__dots"></span>
+                    <span class="slider__dots"></span>
+                    <span class="slider__dots"></span>
+                    <span class="slider__dots"></span>
+                    <span class="slider__dots"></span>
+                </div>
                 <button class="slider__button-mob font btn">Заказать</button>
                 <img  class="slider__direction" src="/images/car-park_right.png" alt="image">
             </div>
@@ -172,30 +174,21 @@
             <div class="feedbacks__clients">
                 <div  class="clients__feedback-card">
                     <p class="clients__name small-heading">Ирина</p>
-                    <div>
-                        <span>24.03.2019</span>
-                        <img src="/images/feedbacks__stars.png" alt="image">
-                    </div>
+                    <span class="clients__date">24.03.2019</span>
                     <p class="clients__feedback-info">Обращение к вам за помощью в переезде оставило только положительные впечатления. Хотелось отметить замечательного водителя газели Алексея. Были трудности с заездом 
                         во двор, он проявил себя как компетентный и профессиональный сотрудник, за что ему огромное...  </p>
                     <span class="clients__feedback-continue">Читать полностью </span>
                 </div>
                 <div class="clients__feedback-card">
                     <p class="clients__name small-heading">Светлана Васильевна </p>
-                    <div>
-                        <span>13.09.2019</span>
-                        <img src="/images/feedbacks__stars.png" alt="image">
-                    </div>
+                        <span class="clients__date">13.09.2019</span>
                     <p class="clients__feedback-info">Сегодня ( 13.09.2019 ) мы переехали. Остались очень довольны, несмотря на то, что к нам опоздали на 1,5 часа. Морально были к этому готовы ( в прошлый переезд в другой 
                         фирме тоже опоздали на час).  Водитель заранее позвонил, предупредил, что задерживается. Когда....</p>
                     <span class="clients__feedback-continue">Читать полностью </span>
                 </div>
                 <div class="clients__feedback-card">
                     <p class="clients__name small-heading">Ольга Петрова</p>
-                    <div>
-                        <span>11.11.2019</span>
-                        <img src="/images/feedbacks__stars.png" alt="image">
-                    </div>
+                    <span class="clients__date">11.11.2019</span>
                     <p class="clients__feedback-info">Могу на 100% порекомендовать компанию MOVEE и отметить, что цены фиксированы, что упрощает расчет. Безо всяких заморочек, в отличии от их конкурентов. Упаковали все 
                         качественно и быстро. Все вещи приехали в сохранности. Особлая благодарность Александру за его...</p>
                     <span class="clients__feedback-continue">Читать полностью </span>
