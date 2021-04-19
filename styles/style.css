@@ -241,7 +241,7 @@ a{
 .list-info__article{
     line-height: 1.31rem;
     padding-top: 1rem;
-    width: 24rem;
+    max-width: 24rem;
 }
 
 .list__title-mob{
@@ -343,7 +343,9 @@ a{
 
 .car-park__slider{
     display: flex;
-    padding-left: 3rem;
+    width: 93%;
+    margin: 0 auto;
+    justify-content: space-between;
 }
 
 
@@ -352,7 +354,7 @@ a{
     padding-bottom: 4rem;
 }
 .slider__car-info{
-    margin:3rem 7rem 0 6rem;
+    margin:3rem;
 }
 
 .slider__car-title{
@@ -368,7 +370,7 @@ a{
 }
 
 .slider__car-image{
-    margin-right: 6.4rem;
+    max-width: 54%;
 }
 
 .slider__order-button{
@@ -438,7 +440,7 @@ a{
 }
 
 
-@media screen and (min-width:200px) and (max-width:770px){
+@media screen and (min-width:200px) and (max-width:800px){
     .container{
         width: 19.25rem;
     }
@@ -612,7 +614,7 @@ a{
     }
 
     .cards__button{
-        width: 18.25rem;
+        max-width: 18.25rem;
         height: 3.75rem;
     }
 
@@ -666,6 +668,7 @@ a{
         height: 14.19rem;
         padding-left: 0;
         margin: 0 0 1.1rem -0.5rem;
+        max-width: 100%;
     }
 
     .slider__car-description-mob{
@@ -702,7 +705,7 @@ a{
 
     .slider__button-mob{
         display: flex;
-        width: 18.25rem;
+        max-width: 18.25rem;
         height: 3.75rem;
     }
 
@@ -755,7 +758,7 @@ a{
     }
 
     .feedbacks__button{
-        width: 18.25rem;
+        max-width: 18.25rem;
         height: 3.75rem;
     }
 
