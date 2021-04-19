@@ -1,7 +1,12 @@
 body{
-    width: 100%;
     font-family: 'Montserrat', sans-serif;
     color: #333333;
+    width: 100%;
+}
+
+.container{
+    max-width: 81.625rem;
+    margin: 0 auto;
 }
 
 a{
@@ -13,23 +18,44 @@ a{
     font-size: 1.88rem;
     line-height: 2.29rem;
     font-weight: 600;
+}
 
+.small-heading{
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.81rem;
+}
+
+.font{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+.btn{
+    width: 15.625rem;
+    height: 3.125rem;
+    background-color: #FED100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
 }
 
 .first-section{
-    width: 100%;
-    padding: 2rem 19% 2.29rem 23%;
-    background: url(/images/first-section_man.png) 57.5rem 2.5rem no-repeat, url(/images/first-section_car.png) 76rem 10.5rem no-repeat;
+    padding: 2rem 0 2.29rem 0;
+    background: url(/images/first-section_man.png) 60%  100% no-repeat, url(/images/first-section_car.png) 86%  50% no-repeat;
     background-color: hsl(49, 100%, 50%);
 }
+
 .header{
     display: flex;
+    justify-content: space-between;
 }
 .header_logo{
     font-size: 1.88rem;
     font-weight: 600;
     line-height: 2.31rem;
-    margin-right: 19.5rem;
     padding-top: 0.5rem;
 }
 
@@ -37,10 +63,7 @@ a{
     display: flex;
     justify-content: space-between;
     width: 28.75rem;
-    margin-right: 13.5rem;
-    padding-top: 1rem;
-    position: relative;
-    z-index: 2;
+    padding: 1rem 0 0 5.3rem;
 }
 .header_menu li{
     font-size: 1.13rem;
@@ -64,8 +87,13 @@ a{
 .menu-burger{
     display: none;
 }
+
 .first-section_main-part{
     display: flex;
+}
+
+.first-section_main{
+    width: 50%;
 }
 
 .first-section_title{
@@ -104,7 +132,7 @@ a{
 .button-btn:hover{
     background: #FF772B;
     transition: 0.5s;
-    box-shadow: 10px 10px 0px #F2F2F2;
+    box-shadow: 0.625rem 0.625rem 0 #F2F2F2;
 
 }
 
@@ -114,13 +142,13 @@ a{
     height: 3.75rem;
     top: 0.7rem;
     left: 0.4rem;
-    border: 2px solid #F2F2F2;
+    border: 0.125rem solid #F2F2F2;
     z-index: 0;
 }
 
 .first-section_advantages{
     display: flex;
-    padding-top: 8.5rem;
+    padding: 8.5rem 0 3rem 0;
 }
 
 .first-section_advantages p{
@@ -134,6 +162,10 @@ a{
     display: flex;
 }
 
+.first-section__phone-call{ 
+    width: 50%;
+    position: relative;
+}
 
 .phone-btn{
     width: 8.5rem;
@@ -143,8 +175,11 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25rem 0 0 38rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
+    
 
 .phone-btn_link{
     display: block;
@@ -155,7 +190,6 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .phone-btn_link::after{
@@ -169,10 +203,251 @@ a{
     background-color: #3d9be9;
   }
 
-@media screen and (max-width:320px){
+  /* how-it-works section*/
+
+  .how-it-works{
+    padding: 6rem 0 3.4rem 0;
+    background-color: #FFFFFF;
+}
+
+.how-it-works__title{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+.how-it-works__list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.how-it-works__list-item{
+    display: flex;
+    width: 47%;
+}
+
+.list-item__numbers{
+    font-size: 3.13rem;
+    line-height: 3.81rem;
+    text-shadow: 0.05rem 0.05rem 0 #FED100;
+    margin-left: 6rem;
+}
+
+.how-it-works__list-info{
+    padding: 0.3rem 0 0 2.4rem;
+    margin-bottom: 3.3rem;
+}
+
+
+.list-info__article{
+    line-height: 1.31rem;
+    padding-top: 1rem;
+    max-width: 24rem;
+}
+
+.list__title-mob{
+    display: none;
+}
+
+/*section prices*/  
+.prices{
+    margin-bottom: 6.5rem;
+}
+
+.prices__title{
+    text-align: center;
+    padding-bottom: 0.7rem;
+}
+
+.prices__article{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.prices__cards{
+    display: flex;
+}
+
+.cards__info{
+    width: 32%;
+    border: 0.063rem solid #EBEBEB;
+    padding: 5rem 0 5rem 0;
+}
+
+.cards__info:not(:last-child){
+    margin-right: 1.5rem;
+}
+
+.cards__info:hover{
+    border-color: #FED100;
+}
+
+.cards__title{
+    text-align: center;
+    padding-bottom: 4rem;
+}
+
+
+.cards__details{
+    text-align: center;
+}
+
+.cards__details li{
+    padding-bottom: 2.2rem;
+}
+
+.cards__service-cost{
+    display: block;
+    text-align: center;
+    padding-top: 2rem;
+    padding-bottom: 3.2rem;
+}
+
+.cards__button:hover{
+    box-shadow: 0px 0.25rem 1.5rem #FED100;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.prices__all-prices{
+    display: none;
+}
+
+/*car-park section*/
+
+.car-park__title{
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.car-park__article{
+    text-align: center;
+}
+
+.car-park__types{
+    display: flex;
+    justify-content: center;
+    padding: 3.7rem 0 3rem 1rem;
+}
+
+.types__cars{
+    border: 1px solid #EBEBEB;
+    width: 12.56rem;
+    height: 2.3rem;
+    text-align: center;
+    padding-top: 0.7rem;
+    margin-right: 1rem;
+}
+
+.types__cars:active{
+    border: 0.125rem solid #FED100;
+}
+
+.car-park__slider{
+    display: flex;
+    width: 93%;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+
+.slider__direction{
+    align-self: center;
+    padding-bottom: 4rem;
+}
+.slider__car-info{
+    margin:3rem;
+}
+
+.slider__car-title{
+    padding-bottom: 2.5rem;
+}
+.slider__car-list li{
+    line-height: 1.31rem;
+    padding-bottom: 1.8rem;
+}
+.slider__car-list li::before{
+    content: url(/images/car-park__list.png);
+    padding-right: 1rem;
+}
+
+.slider__car-image{
+    max-width: 54%;
+}
+
+.slider__order-button{
+    margin-top: 0.5rem;
+}
+
+.slider__order-button:hover{
+    box-shadow: 0px 0.25rem 1.5rem #FED100;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
+.slider__car-description-mob,
+.slider__dots,
+.slider__button-mob{
+    display: none;
+}
+
+/*feedbacks section*/
+.feedbacks{
+    background-color: #FED100;
+    padding:0 4rem 6rem 0;
+    margin-top: 2.7rem;
+}
+
+.feedbacks__title{
+    padding-top: 6.3rem;
+    text-align: center;
+}
+.feedbacks__clients{
+    display: flex;
+    padding: 3.8rem 0 3.9rem 0;
+}
+
+.clients__feedback-card:not(:last-child){
+    margin-right: 1.8rem;
+}
+
+
+.clients__name{
+    padding-bottom: 0.7rem;
+}
+
+.clients__date::after{
+    content: url(/images/feedbacks__stars.png);
+    padding-left: 0.5rem;
+}
+
+.clients__feedback-info{
+    margin: 1.5rem 0;
+    line-height: 1.31rem;
+}
+
+.clients__feedback-continue{
+    text-decoration: underline;
+}
+
+.feedbacks__button{
+    border: 1px solid #333333;
+}
+
+.feedbacks__button:hover{
+    background-color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s;
+}
+
+
+@media screen and (min-width:200px) and (max-width:800px){
+    .container{
+        width: 19.25rem;
+    }
     .first-section{
-        padding: 1.9rem 0 0 0.8rem;
-        background-position: 2rem 5rem;
+        min-height: 250px;
+        padding: 0;
+        padding: 1.75rem 0 4.5rem 0.8rem;
         background: none;
         background-color: hsl(49, 100%, 50%);
     }
@@ -180,19 +455,20 @@ a{
     .header_logo{
         font-size: 1rem;
         line-height: 1.22rem;
-        margin-right: 0;
+        margin: 0;
         padding-top: 0;
     }
     
     .menu-burger{
         display: block;
-        padding-left: 11.7rem;
+        justify-content: end;
+        margin-right: 1rem;
     }
 
     .first-section_title{
         font-size: 1.75rem;
         width: 12rem;
-        padding: 1rem 0 0 3.3rem;
+        padding: 1rem 0 0 3.1rem;
         text-align: center;
         line-height: 2.4rem;
     }
@@ -200,18 +476,21 @@ a{
     .first-section_article{
         font-size: 1.13rem;
         line-height: 1.38rem;
-        padding: 0.1rem 0 0 2.6rem;
+        width: 18rem;
+        text-align: center;
     }
     
     .man-image_mobile{
         display: block;
-        margin: -2.5rem 0 -1.7rem 2rem;
-    
+        margin: -5.1rem 0 0 2rem;
     }
+
+
     .header_menu,
     .header_number,
     .first-section_advantages,
     .button-border,
+    .list__article,
     .phone-btn{
        display: none;
     }
@@ -221,7 +500,266 @@ a{
         font-size: 1.25rem;
         line-height: 1.53rem;
         width: 18rem;
-        margin-bottom: 2.5rem;
+        position: absolute;
+        top: -1.8rem;
+    }
+
+    /*how-it-works section*/
+
+    .how-it-works{
+        padding: 0;
+        padding-top: 2.5rem;
+    }
+
+    .how-it-works__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding-bottom: 2.8rem;
+    }
+
+    .how-it-works__list{
+        display: block;
+        padding-left: 0.5rem;
+    }
+
+    .how-it-works__list-item{
+        width: 100%;
+    }
+
+    .how-it-works__list-info{
+        padding: 0.3rem 0.1rem 0 0.8rem;
+    }
+
+    .list-info__title{
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .list__title-desk,
+    .list-info__article{
+        display: none;
+    }
+
+    .list__title-mob{
+        display: inline;
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+
+    .list-item__numbers{
+        margin-left: 2rem;
+    }
+
+    .number-1 p{
+        padding-right: 1rem;
+    }
+
+    .number-2 p {
+        margin-top: -1rem;
+    }
+
+    .number-3 p{
+        margin-top: -0.5rem;
+    }
+
+    .number-4{
+        margin-top: -0.7rem;
+    }
+
+    .number-4 p{
+        margin-top: -0.5rem;
+    }
+
+
+    /*prices*/
+
+    .prices{
+        margin: 2.9rem 0 5.7rem 0;
+    }
+
+    .prices__article,
+    .cards__info:first-child,
+    .cards__info:last-child{
+        display: none;
+    }
+
+    .prices__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+    }
+
+    .prices__cards{
+        margin: 0;
+        width: 100%;
+    }
+
+    .cards__info{
+        width: 100%;
+        padding: 1.7rem 0 0 0.5rem;
+        border: none;
+    }
+
+    .cards__title{
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+        padding-bottom: 1.7rem;
+    }
+
+    .cards__details li{
+        padding-bottom: 1.3rem;
+    }
+
+    .cards__service-cost{
+        padding: 1.5rem 0 3.2rem 0;
+    }
+
+    .cards__button{
+        max-width: 18.25rem;
+        height: 3.75rem;
+    }
+
+    .prices__all-prices{
+        display: block;
+        text-decoration: underline;
+        line-height: 1.31rem;
+        text-align: center;
+        padding-top: 1.3rem;
+    }
+    
+    /*car-park section*/
+
+    .car-park__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding-bottom: 0.6rem;
+    }
+
+    .car-park__article,
+    .slider__direction,
+    .slider__car-info{
+        display: none;
+    }
+
+    .car-park__types{
+        padding: 0 0 0 0.5rem;
+    }
+
+    .types__cars{
+        font-size: 1rem;
+        margin-bottom: 1.4rem;
+        line-height: 1rem;
+        border: none;
+        padding-top: 0.6rem;
+    }
+
+    .types__cars:active{
+        box-shadow: inset 0 -1.17rem white, inset 0 -1.2rem #FED100;
+    }
+
+    .car-park__slider{
+        margin: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-left: 0;
+        display: inline;
+    }
+
+    .slider__car-image{
+        height: 14.19rem;
+        padding-left: 0;
+        margin: 0 0 1.1rem -0.5rem;
+        max-width: 100%;
+    }
+
+    .slider__car-description-mob{
+        display: block;
+        font-size: 0.75rem;
+        line-height: 0.94rem;
+        text-align: center;
+    }
+
+    .slider__dots-choice{
+        display: flex;
+        justify-content: center;
+        margin: 2.3rem 0  2.2rem 0;
+    }
+
+    .slider__dots{
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #333333;
+        margin-left: 1rem;
+    }
+
+    .slider__dots:hover::before{
+        content: "";
+        display: block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        box-shadow: 0 0 0 0.2rem white, 0 0 0 0.3rem #FED100;
+    }
+
+
+    .slider__button-mob{
+        display: flex;
+        max-width: 18.25rem;
+        height: 3.75rem;
+    }
+
+    /*feedbacks section*/
+
+    .feedbacks{
+        padding-bottom: 3rem;
+    }
+
+    .feedbacks__title{
+        font-size: 1.25rem;
+        line-height: 1.5rem;
+        padding: 2.6rem 0 0 0;
+    }
+
+    .clients__feedback-card:first-child,
+    .clients__feedback-card:last-child{
+        display: none;
+    }
+
+    .feedbacks__clients{
+        padding: 0;
+    }
+
+    .clients__feedback-card:nth-child(2){
+        font-size: 1rem;
+        line-height: 1.31rem;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .clients__name{
+        font-size: 1.13rem;
+        line-height: 1.38rem;
+        padding-bottom: 0;
+        margin: 2.5rem 0 0.6rem 0.3rem;
+    }
+
+    .clients__date span{
+        padding-left: 0.4rem;
+    }
+
+    .clients__feedback-info{
+        padding: 0.9rem 0 0 0.4rem;
+    }
+
+    .clients__feedback-continue{
+        display: block;
+        margin: 0 0 2.8rem 0.3rem;
+    }
+
+    .feedbacks__button{
+        max-width: 18.25rem;
+        height: 3.75rem;
     }
 
 }
