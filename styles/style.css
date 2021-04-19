@@ -92,6 +92,10 @@ a{
     display: flex;
 }
 
+.first-section_main{
+    width: 50%;
+}
+
 .first-section_title{
     font-size: 4.25rem;
     width: 31.25rem;
@@ -144,7 +148,7 @@ a{
 
 .first-section_advantages{
     display: flex;
-    padding-top: 8.5rem;
+    padding: 8.5rem 0 3rem 0;
 }
 
 .first-section_advantages p{
@@ -158,6 +162,10 @@ a{
     display: flex;
 }
 
+.first-section__phone-call{ 
+    width: 50%;
+    position: relative;
+}
 
 .phone-btn{
     width: 8.5rem;
@@ -167,7 +175,9 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 25rem 0 0 38rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
     
 
@@ -197,6 +207,7 @@ a{
 
   .how-it-works{
     padding: 6rem 0 3.4rem 0;
+    background-color: #FFFFFF;
 }
 
 .how-it-works__title{
@@ -364,6 +375,12 @@ a{
     margin-top: 0.5rem;
 }
 
+.slider__order-button:hover{
+    box-shadow: 0px 0.25rem 1.5rem #FED100;
+    color: #FFFFFF;
+    transition: 0.5s;
+}
+
 .slider__car-description-mob,
 .slider__dots,
 .slider__button-mob{
@@ -372,7 +389,6 @@ a{
 
 /*feedbacks section*/
 .feedbacks{
-    width: 100%;
     background-color: #FED100;
     padding:0 4rem 6rem 0;
     margin-top: 2.7rem;
@@ -422,11 +438,12 @@ a{
 }
 
 
-@media screen and (max-width:320px){
+@media screen and (min-width:200px) and (max-width:770px){
     .container{
         width: 19.25rem;
     }
     .first-section{
+        min-height: 250px;
         padding: 0;
         padding: 1.75rem 0 4.5rem 0.8rem;
         background: none;
@@ -457,13 +474,16 @@ a{
     .first-section_article{
         font-size: 1.13rem;
         line-height: 1.38rem;
-        padding-left: 2.7rem;
+        width: 18rem;
+        text-align: center;
     }
     
     .man-image_mobile{
         display: block;
         margin: -5.1rem 0 0 2rem;
     }
+
+
     .header_menu,
     .header_number,
     .first-section_advantages,
