@@ -3,5 +3,5 @@
 ***MOVEE website***
 
 
-***From 1 to 5 sections***
+***From 1 to 8 sections***
 
