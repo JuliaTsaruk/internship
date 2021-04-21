@@ -7,6 +7,7 @@ body{
 .container{
     max-width: 81.625rem;
     margin: 0 auto;
+    padding: 0 0.3rem;
 }
 
 a{
@@ -119,7 +120,7 @@ a{
 
 .button-btn{
     position: absolute;
-    background: #FF352B;
+    background-color: #FF352B;
     width: 19rem;
     height: 3.88rem;
     font-size: 1.5rem;
@@ -131,7 +132,7 @@ a{
 }
 
 .button-btn:hover{
-    background: #FF772B;
+    background-color: #FF772B;
     transition: 0.5s;
     box-shadow: 0.625rem 0.625rem 0 #F2F2F2;
 
@@ -448,6 +449,11 @@ a{
     margin: 0 auto;
 }
 
+.make-order__mobile-title,
+.make-order__mobile-button{
+    display: none;
+}
+
 .make-order__article{
     line-height: 1.31rem;
     padding: 0.7rem 0 2.2rem 0;
@@ -593,7 +599,7 @@ a{
     margin-right: 4.3rem;
 }
 
-.make-order_button-order{
+.make-order__button-order{
     position: relative;
 }
 
@@ -660,9 +666,16 @@ a{
     background-color: #F8F8F8
 }
 
+/*map section*/
+
 .map{
     position: relative;
     margin-top: 6.5rem;
+}
+
+.map__google-map{
+    width: 100%;
+    height: 41.625rem;
 }
 
 .map__movee-info{
@@ -699,10 +712,15 @@ a{
     padding-right: 1.56rem;
 }
 
+.map__movee-mobile{
+    display: none;
+}
+
 /*footer section*/
 .footer{
     background-color: #FED100;
     padding: 6rem 0;
+    margin-top: -0.2rem;
 }
 
 .footer__container{
@@ -758,7 +776,7 @@ a{
 }
 
 .call__button{
-    width: 15.625rem;
+    width: 100%;
     height: 2.75rem;
     background-color: #FED100;
     border: 1px solid #333333;
@@ -772,6 +790,11 @@ a{
 .call__number-link{
     border-bottom: 1px solid #333333;
 }
+
+.call__mobile-number{
+    display: none;
+}
+
 
 
 
@@ -838,6 +861,10 @@ a{
         width: 18rem;
         position: absolute;
         top: -1.8rem;
+    }
+
+    .button-btn:hover{
+        box-shadow: none;
     }
 
     /*how-it-works section*/
@@ -950,7 +977,7 @@ a{
     }
 
     .cards__button{
-        max-width: 18.25rem;
+        width: 18.25rem;
         height: 3.75rem;
     }
 
@@ -1041,8 +1068,14 @@ a{
 
     .slider__button-mob{
         display: flex;
-        max-width: 18.25rem;
+        width: 18.25rem;
         height: 3.75rem;
+    }
+
+    .slider__button-mob:hover{
+        box-shadow: 0px 0.25rem 1.5rem #FED100;
+        color: #FFFFFF;
+        transition: 0.5s;
     }
 
     /*feedbacks section*/
@@ -1094,8 +1127,174 @@ a{
     }
 
     .feedbacks__button{
-        max-width: 18.25rem;
+        width: 18.25rem;
         height: 3.75rem;
+    }
+
+    /*make-order section*/
+
+    .make-order__title,
+    .make-order__location,
+    .make-order__payment-methods,
+    .make-order__additional-services,
+    .make-order__discount-time,
+    .make-order__button-order{
+        display: none;
+    }
+    .make-order{
+        padding: 0;
+        padding-top: 4rem;
+    }
+
+    .make-order__mobile-title{
+        display: block;
+        font-weight: 600;
+        text-align: center;
+        max-width: 15rem;
+        margin: 0 auto;
+    }
+
+    .make-order__article{
+        padding: 0.6rem 0 2.5rem 0.6rem;
+        font-size: 0.94rem;
+    }
+
+    .make-order__info{
+        padding-bottom: 0;
+    }
+
+    .make-order__name{
+        width: 100%;
+        margin:0 0 2rem 0.6rem;
+    }
+
+    .make-order__tel{
+        width: 100%;
+        margin: 0 0 3rem 0.6rem;
+    }
+
+    .make-order__mobile-button{
+        max-width: 18rem;
+        height: 3.75rem;
+        background-color: #FF352B;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        color: #F2F2F2;
+        font-size: 1.3rem;
+    }
+
+    .make-order__mobile-button:hover{
+        background-color: #FF772B;
+    }
+
+    .make-order__time-and-button{
+        margin-top: 1rem;
+        display: inline;
+    }
+
+    .make-order__confirmation{
+        margin: 0.8rem 0 0 0.6rem;
+    }
+
+    /*map section*/
+    .map{
+        margin-top: 4.2rem;
+    }
+
+    .map__google-map{
+        height: 32.75rem;
+    }
+
+    .map__movee-info{
+        display: none;
+    }
+
+    .map__movee-mobile{
+        display: block;
+        font-size: 0.94rem;
+    }
+
+    .movee-mobile__list{
+        padding: 2.8rem 0 3rem 2.8rem;
+    }
+
+    .movee-mobile__list-item:not(:last-child){
+        padding-bottom: 1.5rem;
+    }
+
+    .list-item__link{
+        border-bottom: 1px solid #333333;
+    }
+
+    /*footer section*/
+
+    .footer{
+        padding: 4rem 0 3.2rem 0;
+    }
+
+    .footer__container{
+        flex-direction: column;
+    }
+    .footer__container > div{
+        width: 100%;
+    }
+    
+    .rules-info__title{
+        text-align: center;
+        padding-bottom: 2.2rem;
+    }
+
+    .rules-info__confidentiality{
+        text-align: center;
+        padding: 0 0 1.5rem 2rem;
+    }
+
+    .rules-info__personal-info{
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .navigation__menu{
+        text-align: center;
+        margin: 0 0 3rem 0;
+    }
+
+    .footer__social-networks{
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer__networks{
+        justify-content: center;
+        display: flex;
+    }
+
+    .social-networks__email{
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .social-networks__share,
+    .social-networks__vk-fb,
+    .footer__call{
+        display: none;
+    }
+
+    .call__mobile-number{
+        display: block;
+        border: 1px solid #333333;
+        height: 3.75rem;
+        width: 18.25rem;
+    }
+
+    .call__mobile-number:hover{
+        background-color: #FFFFFF;
+        font-weight: bold;
+        border: none;
+        transition: 0.5s;
+    }
     }
 
 

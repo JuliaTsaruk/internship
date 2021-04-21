@@ -204,6 +204,7 @@
     <section class="make-order">
         <div class="container">
             <h2 class="make-order__title heading">Закажи  переезд прямо сейчас со скидкой %</h2>
+            <h2 class="make-order__mobile-title font">Закажи  переезд прямо сейчас</h2>
             <div class="wrapper">
                 <p class="make-order__article">Мы перезвоним в течении 10 секунд</p>
                 <div class="make-order__info">
@@ -260,10 +261,11 @@
                 <div class="make-order__time-and-button">
                     <div class="make-order__discount-time">05:37:25</div>
                     <div class="make-order__btn-confirmation">
-                        <div class="make-order_button-order">
-                            <button class="button-order__btn button-btn">Заказать со скидой</button>
+                        <div class="make-order__button-order">
+                            <button class="button-order__btn button-btn">Заказать со скидкой</button>
                             <div class="button-order__bottom button-border"></div>
                         </div>
+                        <div class="make-order__mobile-button">Перезвонить мне</div>
                         <div class="make-order__confirmation">
                             <input class="confirmation__checkbox" id="confirm" name="data-processing" type="checkbox" value="confirm">
                             <label for="confirm">Даю согласие на обработку данных</label>
@@ -274,8 +276,8 @@
         </div>
     </section>
     <section class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3789165692783!2d23.694600315363648!3d52.091035175683274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1618995040990!5m2!1sru!2sby" 
-        width="1920" height="666" style="border:0;" allowfullscreen="" loading="lazy">
+        <iframe class="map__google-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2451.3789165692783!2d23.694600315363648!3d52.091035175683274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47210bf0d6c7cb8f%3A0x5d0b2cc4f645f8ca!2z0YPQuy4g0JHRg9C00ZHQvdC90L7Qs9C-IDY0LCDQkdGA0LXRgdGC!5e0!3m2!1sru!2sby!4v1618995040990!5m2!1sru!2sby" 
+         style="border:0;" allowfullscreen="" loading="lazy">
         </iframe>
         <div class="map__movee-info">
             <h2 class="movee-info__title heading">MOVEE</h2>
@@ -302,6 +304,17 @@
                     <img src="/images/insta-small.png" alt="img">
                 </a>
             </div>
+        </div>
+        <div class="map__movee-mobile">
+            <ul class="movee-mobile__list"> 
+                <li class="movee-mobile__list-item">Брест</li>
+                <li class="movee-mobile__list-item">
+                    <a href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
+                </li>
+                <li class="movee-mobile__list-item">
+                    <a class="list-item__link" href="mailto:hello@movee.ru">hello@movee.ru</a>
+                </li>
+            </ul>
         </div>
     </section>
     <section class="footer">
@@ -350,6 +363,7 @@
                 <button class="call__button font">Обратный звонок</button>
                 <p class="call__number font"><a class="call__number-link" href="tel:8(029)-999-12-13">8(029)-999-12-13</a></p>
             </div>
+            <button class="call__mobile-number btn font">Заказать</button>
         </div>
     </section>
 </body>
