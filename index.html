@@ -240,25 +240,41 @@
                 </div>
                 <div class="make-order__payment-methods">
                     <h4 class="payment-methods__subtitle make-order__subtitle font">Способ оплаты</h4>
-                    <input class="payment-methods__radio-btn" id="cash" name="payment" type="radio" value="cash">
-                    <label for="cash">Наличными курьеру</label>
-                    <input class="payment-methods__radio-btn" id="card" name="payment" type="radio" value="card">
-                    <label for="card">Картой курьеру</label>
-                    <input class="payment-methods__radio-btn" id="bank" name="payment" type="radio" value="bank">
-                    <label for="bank">Банковский перевод</label>
+                    <label class="payment-methods__label">
+                        <input class="payment-methods__radio-btn" name="payment" type="radio" value="cash">
+                        <span>Наличными курьеру</span>
+                    </label>
+                    <label class="payment-methods__label">
+                        <input class="payment-methods__radio-btn" name="payment" type="radio" value="card">
+                        <span>Картой курьеру</span>
+                    </label>
+                    <label class="payment-methods__label">
+                        <input class="payment-methods__radio-btn" name="payment" type="radio" value="bank">
+                        <span>Банковский перевод</span>
+                    </label>
                 </div>
                 <div class="make-order__additional-services">
                     <h4 class="make-order__subtitle font">Дополнительные услуги</h4>
-                    <input class="additional-services__checkbox" id="measurer" name="service" type="checkbox" value="measurer">
-                    <label for="measurer">Вызов замерщика</label>
-                    <input class="additional-services__checkbox" id="fragile" name="service" type="checkbox" value="fragile">
-                    <label for="fragile">Упаковка для хрупких предметов</label>  
-                    <input class="additional-services__checkbox" id="crane" name="service" type="checkbox" value="crane">
-                    <label for="crane">Кран</label> 
-                    <input class="additional-services__checkbox" id="furniture" name="service" type="checkbox" value="furniture">
-                    <label for="furniture">Сборка мебели</label> 
-                    <input class="additional-services__checkbox" id="oversized" name="service" type="checkbox" value="oversized">
-                    <label for="oversized">Крупногабаритные предметы</label>
+                    <label class="additional-services__label">
+                        <input class="additional-services__checkbox" name="service" type="checkbox" value="measurer">
+                        <span>Вызов замерщика</span>
+                    </label>
+                    <label class="additional-services__label">
+                        <input class="additional-services__checkbox" name="service" type="checkbox" value="fragile">
+                        <span>Упаковка для хрупких предметов</span>
+                    </label>
+                    <label class="additional-services__label">
+                        <input class="additional-services__checkbox" name="service" type="checkbox" value="crane">
+                        <span>Кран</span>
+                    </label>
+                    <label class="additional-services__label">
+                        <input class="additional-services__checkbox" name="service" type="checkbox" value="furniture">
+                        <span>Сборка мебели</span>
+                    </label>
+                    <label class="additional-services__label">
+                        <input class="additional-services__checkbox" name="service" type="checkbox" value="oversized">
+                        <span>Крупногабаритные предметы</span>
+                    </label>
                 </div>
                 <div class="make-order__time-and-button">
                     <div class="make-order__discount-time">05:37:25</div>
@@ -283,15 +299,9 @@
         </iframe>
         <div class="map__movee-info">
             <h2 class="movee-info__title heading">MOVEE</h2>
-            <ul class="movee-info__list"> 
-                <li class="movee-info__list-item">Брест</li>
-                <li class="movee-info__list-item">
-                    <a href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
-                </li>
-                <li class="movee-info__list-item">
-                    <a href="mailto:hello@movee.ru">hello@movee.ru</a>
-                </li>
-            </ul>
+            <p class="movee-info__item" >Брест</p>
+            <a class="movee-info__item" href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
+            <a class="movee-info__item" href="mailto:hello@movee.ru">hello@movee.ru</a>
             <div class="movee-info__networks">
                 <a class="movee-info__networks-list" href="https://www.youtube.com/" target="_blank">
                     <img src="/images/youtube-small.png" alt="img">
@@ -308,15 +318,9 @@
             </div>
         </div>
         <div class="map__movee-mobile">
-            <ul class="movee-mobile__list"> 
-                <li class="movee-mobile__list-item">Брест</li>
-                <li class="movee-mobile__list-item">
-                    <a href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
-                </li>
-                <li class="movee-mobile__list-item">
-                    <a class="list-item__link" href="mailto:hello@movee.ru">hello@movee.ru</a>
-                </li>
-            </ul>
+            <p class="movee-mobile__item" >Брест</p>
+            <a class="movee-mobile__item" href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
+            <a class="movee-mobile__item item__link" href="mailto:hello@movee.ru">hello@movee.ru</a>
         </div>
     </section>
     <section class="footer">
@@ -327,13 +331,11 @@
                 <p class="rules-info__personal-info">Соглашение на обработку персональных данных</p>
             </div>
             <div class="footer__navigation">
-                <ul class="navigation__menu font">
-                    <li class="navigation__menu-list">Главная</li>
-                    <li class="navigation__menu-list">Цена</li>
-                    <li class="navigation__menu-list">Автопарк</li>
-                    <li class="navigation__menu-list">Отзывы</li>
-                    <li class="navigation__menu-list">Контакты</li>
-                </ul>
+                <a class="navigation__menu font">Главная</a>
+                <a class="navigation__menu font">Цена</a>
+                <a class="navigation__menu font">Автопарк</a>
+                <a class="navigation__menu font">Отзывы</a>
+                <a class="navigation__menu font">Контакты</a>
             </div>
             <div class="footer__social-networks">
                 <div class="footer__networks">
@@ -350,7 +352,7 @@
                         <img src="/images/insta-small.png" alt="img">
                     </a>
                 </div>
-                <p class="social-networks__email font"><a href="mailto:hello@movee.ru">hello@movee.ru</a></p>
+                <a class="social-networks__email font" href="mailto:hello@movee.ru">hello@movee.ru</a>
                 <p class="social-networks__share font">Поделиться в соц. сетях</p>
                 <div class="social-networks__vk-fb">
                     <a href="https://vk.com/" target="_blank">
@@ -363,7 +365,7 @@
             </div>
             <div class="footer__call">
                 <button class="call__button font">Обратный звонок</button>
-                <p class="call__number font"><a class="call__number-link" href="tel:8(029)-999-12-13">8(029)-999-12-13</a></p>
+                <a class="call__number-link font" href="tel:8(029)-999-12-13">8(029)-999-12-13</a>
             </div>
             <button class="call__mobile-number btn font">Заказать</button>
         </div>

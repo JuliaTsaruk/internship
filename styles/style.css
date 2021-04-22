@@ -506,6 +506,8 @@ button:focus{
 .location__select{
     width: 83%;
     margin-bottom: 2rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 }
 .location__select:first-child{
     opacity: 0.4;
@@ -532,14 +534,13 @@ button:focus{
     opacity: 0;
 }
 
-.payment-methods__radio-btn+label{
+.payment-methods__label > span{
     display: inline-flex;
     align-items: center;
     user-select: none;
-    margin-right: 2.4rem;
 }
 
-.payment-methods__radio-btn+label::before{
+.payment-methods__label > span::before{
     content: '';
     display: inline-block;
     width: 1.3rem;
@@ -554,14 +555,15 @@ button:focus{
     background-size: 50% 50%;
 }
 
-.payment-methods__radio-btn:checked+label::before{
+.payment-methods__radio-btn:checked + span::before{
     border-color: #FED100;
     background-image: url(/images/radio-btn.png);
 }
 
-.payment-methods__radio-btn:disabled+label::before{
+.payment-methods__radio-btn:disabled + span::before{
     background-color:#F8F8F8;
 }
+
 
 .additional-services__checkbox{
     position: absolute;
@@ -569,14 +571,14 @@ button:focus{
     opacity: 0;
 }
 
-.additional-services__checkbox+label{
+.additional-services__label > span{
     display: inline-flex;
     align-items: center;
     user-select: none;
-    margin:0 2.2rem 2rem 0;
+    padding:0 2.2rem 2rem 0;
 }
 
-.additional-services__checkbox+label::before{
+.additional-services__label > span::before{
     content: '';
     display: inline-block;
     width: 1.3rem;
@@ -591,16 +593,17 @@ button:focus{
     background-size: 50% 50%;
 }
 
-.additional-services__checkbox:checked+label::before{
+
+.additional-services__checkbox:checked+span::before{
     border-color: #FED100;
     background-image: url(/images/checkbox.png);
 }
 
-.additional-services__checkbox:not(:disabled):not(:checked)+label:hover::before{
+.additional-services__checkbox:not(:disabled):not(:checked)+span:hover::before{
     border-color: #FED100;
 }
 
-.additional-services__checkbox:disabled+label::before{
+.additional-services__checkbox:disabled+span::before{
     background-color: #F8F8F8;
 }
 
@@ -709,11 +712,12 @@ button:focus{
     padding-bottom: 2.7rem;
 }
 
-.movee-info__list-item:not(:last-child){
+.movee-info__item{
+    display: block;
     padding-bottom: 1.19rem;
 }
 
-.movee-info__list-item::before{
+.movee-info__item::before{
     content: url(/images/movee-info-list.png);
     padding-right:1rem;
 }
@@ -721,7 +725,7 @@ button:focus{
 .movee-info__networks{
     display: flex;
     justify-content: flex-end;
-    padding: 3.57rem 2.5rem 2.5rem 0;
+    padding: 2.4rem 2.5rem 2.5rem 0;
 }
 
 .movee-info__networks-list:not(:last-child){
@@ -735,7 +739,7 @@ button:focus{
 /*footer section*/
 .footer{
     background-color: #FED100;
-    padding: 6rem 0;
+    padding: 6.8rem 0;
     margin-top: -0.2rem;
 }
 
@@ -750,40 +754,45 @@ button:focus{
 
 .rules-info__title{
     text-align: left;
-    padding-bottom: 3rem;
+    padding-bottom: 2.5rem;
 }
 
 .rules-info__confidentiality{
     line-height: 1.31rem;
     padding-bottom: 2.5rem;
-    max-width: 14.875rem;
+    padding-right: 1rem;
+}
+
+.footer__navigation{
+    align-items: center;
 }
 
 .navigation__menu{
-    margin-left:6.5rem;
+    padding-left: 7rem;
 }
 
-.navigation__menu-list:not(:last-child){
-    padding-bottom: 0.9rem;
+.navigation__menu:not(:last-child){
+    display: block;
+    padding-bottom:0.9rem;
 }
 
 .footer__social-networks{
-    margin-left: 3rem;
+    margin-left:3rem;
     padding-top: 0.3rem;
+}
+
+.footer__networks{
+    margin-bottom: 1rem;
 }
 
 .networks__networks-list:not(:last-child){
     padding-right: 1.8rem;
 }
 
-.social-networks__email{
-    padding: 1rem 0;
-}
-
 .social-networks__share{
     max-width: 10rem;
     text-align: center;
-    padding-bottom: 1rem;
+    padding:2rem 0 1rem 0;
 }
 
 .social-networks__vk-fb{
@@ -797,15 +806,21 @@ button:focus{
     height: 2.75rem;
     background-color: #FED100;
     border: 1px solid #333333;
+    margin-bottom: 0.4rem;
 }
 
-.call__number{
-    margin-top: 0.6rem;
-    text-align: center;
+.call__button:hover{
+    background-color: #FFFFFF;
+    font-weight: bold;
+    border: none;
+    transition: 0.5s;
 }
+
 
 .call__number-link{
     border-bottom: 1px solid #333333;
+    max-width: 11rem;
+    margin: 0 2rem;
 }
 
 .call__mobile-number{
@@ -1231,17 +1246,15 @@ button:focus{
     .map__movee-mobile{
         display: block;
         font-size: 0.94rem;
-    }
-
-    .movee-mobile__list{
         padding: 2.8rem 0 3rem 2.8rem;
     }
 
-    .movee-mobile__list-item:not(:last-child){
+    .movee-mobile__item:not(:last-child){
+        display: block;
         padding-bottom: 1.5rem;
     }
 
-    .list-item__link{
+    .item__link{
         border-bottom: 1px solid #333333;
     }
 
@@ -1260,12 +1273,12 @@ button:focus{
     
     .rules-info__title{
         text-align: center;
-        padding-bottom: 2.2rem;
+        padding-bottom: 2.4rem;
     }
 
     .rules-info__confidentiality{
         text-align: center;
-        padding: 0 0 1.5rem 2rem;
+        padding: 0 1rem 1.5rem 1rem;
     }
 
     .rules-info__personal-info{
@@ -1273,9 +1286,13 @@ button:focus{
         padding-bottom: 3rem;
     }
 
-    .navigation__menu{
+    .footer__navigation{
         text-align: center;
         margin: 0 0 3rem 0;
+    }
+
+    .navigation__menu{
+        padding: 0;
     }
 
     .footer__social-networks{
@@ -1290,7 +1307,7 @@ button:focus{
 
     .social-networks__email{
         text-align: center;
-        padding-bottom: 3rem;
+        display: block;
     }
 
     .social-networks__share,
@@ -1304,6 +1321,7 @@ button:focus{
         border: 1px solid #333333;
         height: 3.75rem;
         width: 18.25rem;
+        margin-top: 2.9rem;
     }
 
     .call__mobile-number:hover{
@@ -1311,6 +1329,6 @@ button:focus{
         font-weight: bold;
         border: none;
         transition: 0.5s;
-    }
-
+        }
+        
 }
