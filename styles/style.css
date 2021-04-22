@@ -44,6 +44,12 @@ a{
     margin: 0 auto;
 }
 
+button,
+button:active,
+button:focus{
+    outline: none;
+}
+
 .first-section{
     padding: 2rem 0 2.29rem 0;
     background: url(/images/first-section_man.png) 60%  100% no-repeat, url(/images/first-section_car.png) 86%  50% no-repeat;
@@ -330,11 +336,12 @@ a{
 
 .types__cars{
     border: 1px solid #EBEBEB;
-    width: 12.56rem;
-    height: 2.3rem;
+    width: 12rem;
+    height: 2.1rem;
     text-align: center;
     padding-top: 0.7rem;
     margin-right: 1rem;
+    border: 0.125rem solid transparent;
 }
 
 .types__cars:active{
@@ -382,6 +389,7 @@ a{
     color: #FFFFFF;
     transition: 0.5s;
 }
+
 
 .slider__car-description-mob,
 .slider__dots,
@@ -482,6 +490,7 @@ a{
     width: 50%;
 }
 
+
 .make-order__location-city{
     width: 50%;
     display: flex;
@@ -497,6 +506,13 @@ a{
 .location__select{
     width: 83%;
     margin-bottom: 2rem;
+}
+.location__select:first-child{
+    opacity: 0.4;
+}
+
+.location-city__name{
+    width: 86%;
 }
 
 .make-order__payment-methods{
@@ -767,12 +783,13 @@ a{
 .social-networks__share{
     max-width: 10rem;
     text-align: center;
+    padding-bottom: 1rem;
 }
 
 .social-networks__vk-fb{
     display: flex;
     justify-content: space-evenly;
-    width: 60%;
+    width: 75%;
 }
 
 .call__button{
