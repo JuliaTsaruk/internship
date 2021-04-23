@@ -656,13 +656,13 @@ button:focus{
     opacity: 0;
 }
 
-.confirmation__checkbox+label{
+.confirmation__checkbox + span{
     display: inline-flex;
     align-items: center;
     user-select: none;
 }
 
-.confirmation__checkbox+label::before{
+.confirmation__checkbox + span::before{
     content: '';
     display: inline-block;
     width: 0.7rem;
@@ -677,11 +677,11 @@ button:focus{
     background-size: 100% 75%;
 }
 
-.confirmation__checkbox:checked+label::before{
+.confirmation__checkbox:checked + span::before{
     background-image: url(/images/car-park__list.png);
 }
 
-.confirmation__checkbox:disabled+label::before{
+.confirmation__checkbox:disabled + span::before{
     background-color: #F8F8F8
 }
 

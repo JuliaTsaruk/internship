@@ -208,6 +208,7 @@
             <div class="wrapper">
                 <p class="make-order__article">Мы перезвоним в течении 10 секунд</p>
                 <div class="make-order__info">
+                    <label></label>
                     <input class="make-order__name input-info" type="text" required placeholder="Ваше имя">
                     <input class="make-order__tel input-info" type="tel" required placeholder="Телефон">
                 </div>
@@ -257,7 +258,7 @@
                     <h4 class="make-order__subtitle font">Дополнительные услуги</h4>
                     <label class="additional-services__label">
                         <input class="additional-services__checkbox" name="service" type="checkbox" value="measurer">
-                        <span>Вызов замерщика</span>
+                        <span>Вызов замерщика</span> 
                     </label>
                     <label class="additional-services__label">
                         <input class="additional-services__checkbox" name="service" type="checkbox" value="fragile">
@@ -285,8 +286,10 @@
                         </div>
                         <div class="make-order__mobile-button">Перезвонить мне</div>
                         <div class="make-order__confirmation">
-                            <input class="confirmation__checkbox" id="confirm" name="data-processing" type="checkbox" value="confirm">
-                            <label for="confirm">Даю согласие на обработку данных</label>
+                            <label>
+                                <input class="confirmation__checkbox" name="data-processing" type="checkbox" value="confirm">
+                                <span>Даю согласие на обработку данных</span>
+                            </label>
                         </div>
                     </div>
                 </div>
