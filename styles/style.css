@@ -344,9 +344,10 @@ button:focus{
     border: 0.125rem solid transparent;
 }
 
-.types__cars:active{
+.active{
     border: 0.125rem solid #FED100;
 }
+
 
 .car-park__slider{
     display: flex;
@@ -360,8 +361,9 @@ button:focus{
     align-self: center;
     padding-bottom: 4rem;
 }
+
 .slider__car-info{
-    margin:3rem;
+    margin:3rem 7rem 3rem 3rem;
 }
 
 .slider__car-title{
@@ -377,7 +379,7 @@ button:focus{
 }
 
 .slider__car-image{
-    max-width: 54%;
+    max-width: 69%;
 }
 
 .slider__order-button{
@@ -564,6 +566,37 @@ button:focus{
     background-color:#F8F8F8;
 }
 
+.make-order__services{
+    display: flex;
+}
+
+.additional-services__more{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-bottom: 0.125rem solid #333333;
+    border-right: 0.125rem solid #333333;
+    transform: rotate(45deg);
+    margin: 0.5rem 0 0 0.8rem;
+}
+
+.additional-services__less{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-bottom: 0.125rem solid #333333;
+    border-right: 0.125rem solid #333333;
+    transform: rotate(225deg);
+    margin: 0.5rem 0 0 0.8rem;
+}
+
+.make-order__labels{
+    display: none;
+}
+
+
+.show-labels{
+    display: block;
+}
+
 
 .additional-services__checkbox{
     position: absolute;
@@ -610,12 +643,13 @@ button:focus{
 .make-order__time-and-button{
     display: flex;
     margin-top: 2.7rem;
+    
 }
 
 .make-order__discount-time{
     font-size: 6rem;
     line-height: 7.81rem;
-    margin-right: 4.3rem;
+    width: 65%;
 }
 
 .make-order__button-order{
@@ -635,6 +669,7 @@ button:focus{
     box-shadow: 0.5rem 0.8rem 0 #FED100;
 }
 
+
 .button-order__bottom{
     border: 0.125rem solid #FED100;
     width: 15.625rem;
@@ -642,7 +677,7 @@ button:focus{
 }
 
 .make-order__btn-confirmation{
-    margin-top: 1rem;
+    margin: 1rem 0 0 0.5rem;
 }
 
 .make-order__confirmation{
