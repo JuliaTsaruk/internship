@@ -1,21 +1,18 @@
 /*additional menu*/
 
-let showList = document.querySelector('.additional-services__more');
-let servicesList = document.querySelector('.make-order__labels');
+const showList = document.querySelector('.additional-services__more');
+const servicesList = document.querySelector('.make-order__labels');
 
-function addServices (){
+showList.addEventListener("click", () => {
     servicesList.classList.toggle("show-labels");
-}
-
-function rotateArrow (){
-    showList.classList.toggle("additional-services__less")
-}
-
-showList.addEventListener("click" , addServices);
-showList.addEventListener("click" , rotateArrow);
+    showList.classList.toggle("additional-services__less");
+})
 
 
 /*slider*/
+
+const slides = document.querySelectorAll(".slider__slides");
+const button = document.querySelectorAll(".types__cars");
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -29,14 +26,20 @@ next.onclick = function(){
     showSlides(slideIndex += 1);
 }
 
+button.forEach((item,indexBtn) =>{
+    item.addEventListener('click', () =>{
+        showSlides (sliderIndex = indexBtn);
+    })
+})
+
 function currentSlide(n) {
-    showSlides(slideIndex = n);
+    showSlides(slideIndex == n);
 }
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("slider__slides");
-    let btn = document.getElementsByClassName("types__cars");
+    const slides = document.getElementsByClassName("slider__slides");
+    const btn = document.getElementsByClassName("types__cars");
     if (n > slides.length) {
       slideIndex = 1
     }
@@ -52,14 +55,17 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "flex";
     btn[slideIndex - 1].className += "active";
 }
+    
+
+
 
 /*time*/
 
 function getTimeRemaining(endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date());
-    var seconds = Math.floor((t / 1000) % 60);
-    var minutes = Math.floor((t / 1000 / 60) % 60);
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+    let t = Date.parse(endtime) - Date.parse(new Date());
+    let seconds = Math.floor((t / 1000) % 60);
+    let minutes = Math.floor((t / 1000 / 60) % 60);
+    let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
     return {
       'total': t,
       'hours': hours,
@@ -69,13 +75,13 @@ function getTimeRemaining(endtime) {
 }
    
 function initializeClock(id, endtime) {
-    var clock = document.getElementById(id);
-    var hoursSpan = clock.querySelector('.hours');
-    var minutesSpan = clock.querySelector('.minutes');
-    var secondsSpan = clock.querySelector('.seconds');
+    let clock = document.getElementById(id);
+    let hoursSpan = clock.querySelector('.hours');
+    let minutesSpan = clock.querySelector('.minutes');
+    let secondsSpan = clock.querySelector('.seconds');
    
     function updateClock() {
-      var t = getTimeRemaining(endtime);
+      let t = getTimeRemaining(endtime);
    
       hoursSpan.innerHTML = ('0' + t.hours + ":").slice(-3);
       minutesSpan.innerHTML = ('0' + t.minutes + ":").slice(-3);
@@ -87,39 +93,43 @@ function initializeClock(id, endtime) {
     }
    
     updateClock();
-    var timeinterval = setInterval(updateClock, 1000);
+    let timeinterval = setInterval(updateClock, 1000);
 }
    
-var deadline = new Date(Date.parse(new Date()) +  6 * 60 * 60 * 1000);
+let deadline = new Date(Date.parse(new Date()) +  6 * 60 * 60 * 1000);
 initializeClock('countdown', deadline);
 
 
 
 /*validation*/
 
-let submit = document.getElementById("submit");
-let formConfirmation = document.getElementById("form");
+let submitInfo = document.getElementById("submit");
 let userName = document.getElementById("client-name");
 let userTel = document.getElementById("client-tel");
 
-function validate() {
+
+function validate(evt) {
     if(!userName.value) {
         userName.style.border = "0.125rem solid red";
+        /*evt.preventDefault();*/
+    }else if(/\s/.test(userName)){
+        userName.style.border = "0.125rem solid red";
+        /*evt.preventDefault();*/
     }else{
         userName.style.border= "0.125rem solid #333333";
     }
-
     if(!userTel.value) {
-
         userTel.style.border = "0.125rem solid red";
+        /*evt.preventDefault();*/
+    }else if(/\s/.test(userTel)){
+        userTel.style.border = "0.125rem solid red";
+        /*evt.preventDefault();*/
     }else{
         userTel.style.border = "0.125rem solid #333333";
     }
-
     return true;
 }
-
-submit.addEventListener("click" , validate);
+submitInfo.addEventListener("click" , validate);
 
 /*add location (пока наброски)*/ 
 
