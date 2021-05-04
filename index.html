@@ -142,8 +142,8 @@
             <h3 class="car-park__article small-heading">10 видов автомобилей от 800 кг до 10 тонн</h3>
             <div class="car-park__types">
                 <div class="types__cars font active">Газели</div>
-                <div class="types__cars font active">Каблуки</div>
-                <div class="types__cars font active">Грузовики</div>
+                <div class="types__cars font">Каблуки</div>
+                <div class="types__cars font">Грузовики</div>
             </div>
             <div  class="car-park__slider">
                 <img  class="slider__direction" id="prev" src="/images/car-park_left.png" alt="image">
@@ -256,13 +256,13 @@
                     <div class="make-order__location-city">
                         <h4 class="location-city__subtitle make-order__subtitle font">Укажите город</h4>
                         <select class="location__select" name="cities">
-                            <option id="city" value="0"selected>Мозырь</option>
-                            <option id="city" value="1">Минск</option>
-                            <option id="city" value="2">Брест</option>
-                            <option id="city" value="3">Витебск</option>
-                            <option id="city" value="4">Гомель</option>
-                            <option id="city" value="5">Гродно</option>
-                            <option id="city" value="6">Могилев</option>
+                            <option id="city" value="мозырь"selected>Мозырь</option>
+                            <option id="city" value="минск">Минск</option>
+                            <option id="city" value="брест">Брест</option>
+                            <option id="city" value="витебск">Витебск</option>
+                            <option id="city" value="гомель">Гомель</option>
+                            <option id="city" value="гродно">Гродно</option>
+                            <option id="city" value="могилев">Могилев</option>
                         </select>
                         <input class="location-city__name input-info" id="addCity" type="text" required placeholder="Добавить город">
                     </div>
@@ -397,10 +397,10 @@
                 <a class="social-networks__email font" href="mailto:hello@movee.ru">hello@movee.ru</a>
                 <p class="social-networks__share font">Поделиться в соц. сетях</p>
                 <div class="social-networks__vk-fb">
-                    <a href="https://vk.com/" target="_blank">
+                    <a href="" id="vk-share" target="_blank">
                         <img src="/images/vk-big.png" alt="img">
                     </a>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="" id="facebook-share" target="_blank">
                         <img src="/images/facebook-big.png" alt="img">
                     </a>
                 </div>

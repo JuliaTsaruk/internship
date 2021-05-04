@@ -344,7 +344,7 @@ button:focus{
     border: 0.125rem solid transparent;
 }
 
-.active{
+.types__cars.active{
     border: 0.125rem solid #FED100;
 }
 
@@ -360,6 +360,14 @@ button:focus{
 .slider__direction{
     align-self: center;
     padding-bottom: 4rem;
+}
+
+.slider__slides{
+    display: none;
+}
+
+.slider__slides.active-slide{
+    display: flex;
 }
 
 
