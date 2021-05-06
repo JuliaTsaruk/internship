@@ -393,10 +393,12 @@
                 <a class="social-networks__email font" href="mailto:hello@movee.ru">hello@movee.ru</a>
                 <p class="social-networks__share font">Поделиться в соц. сетях</p>
                 <div class="social-networks__vk-fb">
-                    <a href="" id="vk-share" target="_blank">
+                    <a href="http://vk.com/share.php?url=URL&title=TITLE&description=DESC&image=IMG_PATH&noparse=true" 
+                    target="_blank" onclick="return Share.me(this);">
                         <img src="/images/vk-big.png" alt="img">
                     </a>
-                    <a href="" id="facebook-share" target="_blank">
+                    <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=TITLE&p%5Bsummary%5D=DESC&p%5Burl%5D=URL&p%5Bimages%5D%5B0%5D=IMG_PATH" 
+                    target="_blank" onclick="return Share.me(this);">
                         <img src="/images/facebook-big.png" alt="img">
                     </a>
                 </div>

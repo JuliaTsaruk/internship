@@ -108,7 +108,7 @@ function checkInputs(){
     const userNameValue = userName.value.trim();
     const userTelValue = userTel.value.trim();
 
-    if(userNameValue === '' || /^\s*$/.test(userNameValue)) {
+    if(userNameValue === '') {
         userName.classList.toggle("invalid");
     }else{
         userName.classList.toggle("valid");
@@ -122,87 +122,58 @@ function checkInputs(){
 
     
 }
-/*function validate(evt) {
-    if(!userName.value) {
-        userName.style.border = "0.125rem solid #FF352B";
-        vt.preventDefault();
-    }else if(/\s/.test(userName)){
-        userName.style.border = "0.125rem solid #FF352B";
-        evt.preventDefault();
-    }else{
-        userName.style.border= "0.125rem solid #333333";
-    }
-    if(!userTel.value) {
-        userTel.style.border = "0.125rem solid #FF352B";
-        evt.preventDefault();
-    }else if(/\s/.test(userTel)){
-        userTel.style.border = "0.125rem solid #FF352B";
-        evt.preventDefault();
-    }else{
-        userTel.style.border = "0.125rem solid #333333";
-    }
-    return true;
-}
-submitInfo.addEventListener("click" , validate);*/
 
 
 /*add location (пока наброски)*/ 
 
-/*Посмотри, пожалуйста, в том ли я вообще напрвлении делаю. И что мне нужно подделать, потому что код не работает, 
-а что можно сделать дальше не знаю*/
-
 const cities = document.querySelector(".location__select");
 const cityInputValue = document.getElementById("addCity").value;
-const newCity = document.createElement("OPTION");
+const newCity = document.createElement("option");
 const newCityValue = document.createTextNode(cityInputValue);
-const push = document.querySelector(".push")
 const cityInput = document.getElementById("addCity");
 
-
-function addValue(){
-    newCity.appendChild(newCityValue);
-    cities.insertBefore(newCity, cities.firstChild);
-
-}
 
 cityInput.addEventListener("keydown", (e) => {
     if(e.code === "Enter"){
         newCity.appendChild(newCityValue);
-        cities.insertBefore(newCity, cities.firstChild);       
+        cities.insertBefore(newCity, cities.firstChild);
     }else{
-        e.preventDefault();
+        return false;
     }
     
 });
 
-/*function addNewInput (){
-    let newCity = document.createElement('option');
-    newCity.value = cityInput.value.toLowerCase();
-    cities.add(newCity);
-    cityInput.value = "";
-    newCity.selected = true;
-}
-
-cityInput.addEventListener("keydown", (e) =>{
-    if(e.keyCode == 13){
-      addNewInput();
-    }else{
-        return false;
-    }
-      
-})
-        
-
 
 /*share */
 
-const vkShare = document.getElementById("vk-share");
-const facebookShare = document.getElementById("facebook-share");
+Share = {
+    vkontakte: function(purl, ptitle, pimg, text) {
+        url  = 'http://vkontakte.ru/share.php?';
+        url += 'url='          + encodeURIComponent(purl);
+        url += '&title='       + encodeURIComponent(ptitle);
+        url += '&description=' + encodeURIComponent(text);
+        url += '&image='       + encodeURIComponent(pimg);
+        url += '&noparse=true';
+        Share.popup(url);
+    },
+  
+    facebook: function(purl, ptitle, pimg, text) {
+        url  = 'http://www.facebook.com/sharer.php?s=100';
+        url += '&p[title]='     + encodeURIComponent(ptitle);
+        url += '&p[summary]='   + encodeURIComponent(text);
+        url += '&p[url]='       + encodeURIComponent(purl);
+        url += '&p[images][0]=' + encodeURIComponent(pimg);
+        Share.popup(url);
+    },
 
-vkShare.addEventListener("click" , () =>{
-    document.location.href = 'https://vk.com/share.php?url=';
-})
+    
+    me : function(el){
+    console.log(el.href);                
+    Share.popup(el.href);
+    return false;                
+    },
 
-facebookShare.addEventListener("click", () => {
-    document.location.href = 'http://www.facebook.com/sharer.php?display=page&u=';
-})
+    popup: function(url) {
+        window.open(url,'','toolbar=0,status=0,width=626,height=436');
+    }
+};
