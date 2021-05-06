@@ -44,6 +44,12 @@ a{
     margin: 0 auto;
 }
 
+.push{
+    border: 2px solid red;
+    width: 80px;
+    height: 40px;
+}
+
 button,
 button:active,
 button:focus{
@@ -493,6 +499,14 @@ button:focus{
     margin-right: 4rem;
 }
 
+.valid{
+    border-bottom: 0.025rem solid #333333;
+}
+
+.invalid{
+    border: 0.125rem solid #FF352B;
+}
+
 .make-order__location{
     display: flex;
 }
@@ -658,7 +672,7 @@ button:focus{
 .make-order__discount-time{
     font-size: 6rem;
     line-height: 7.81rem;
-    width: 65%;
+    width: 60%;
 }
 
 .make-order__button-order{

@@ -70,80 +70,80 @@ prev.addEventListener("click", prevSlide);
 
 
 /*time*/
-/*это я перепишу... но это не точно :)*/
 
-function getTimeRemaining(endtime) {
-    let t = Date.parse(endtime) - Date.parse(new Date());
-    let seconds = Math.floor((t / 1000) % 60);
-    let minutes = Math.floor((t / 1000 / 60) % 60);
-    let hours = Math.floor((t / (1000 * 60 * 60)) % 24);
-    return {
-      'total': t,
-      'hours': hours,
-      'minutes': minutes,
-      'seconds': seconds
-    };
+let time = 21600;
+const timeCountdown = document.getElementById("countdown");
+
+function countTime (){
+    let hours = Math.floor(time/3600);
+    let minutes = Math.floor((time - hours * 3600)/ 60);
+    let seconds = Math.floor((time - hours * 3600 - minutes * 60) % 60);
+    hours = hours <10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0"+ seconds : seconds;
+
+    timeCountdown.innerHTML = `${hours}:${minutes}:${seconds}`;
+    time--;
 }
-   
-function initializeClock(id, endtime) {
-    let clock = document.getElementById(id);
-    let hoursSpan = clock.querySelector('.hours');
-    let minutesSpan = clock.querySelector('.minutes');
-    let secondsSpan = clock.querySelector('.seconds');
-   
-    function updateClock() {
-      let t = getTimeRemaining(endtime);
-   
-      hoursSpan.innerHTML = ('0' + t.hours + ":").slice(-3);
-      minutesSpan.innerHTML = ('0' + t.minutes + ":").slice(-3);
-      secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
-   
-      if (t.total <= 0) {
-        clearInterval(timeinterval);
-      }
-    }
-   
-    updateClock();
-    let timeinterval = setInterval(updateClock, 1000);
-}
-   
-let deadline = new Date(Date.parse(new Date()) +  6 * 60 * 60 * 1000);
-initializeClock('countdown', deadline);
+
+setInterval(countTime, 1000);
 
 
 
 /*validation*/
-/*Вроде добавила проверку на пробелы, но теперь даже при вводе символом горит красным ... пока не понятна, 
-буду разбираться уже завтра или можете намекнуть в чем дело и с preventDefault вопросы. 
-Логика размещения в том, что если ввод не соответствует критериям, то не идет отпрака формы*/
 
-let submitInfo = document.getElementById("submit");
-let userName = document.getElementById("client-name");
-let userTel = document.getElementById("client-tel");
+const form = document.getElementById("form");
+const submit = document.getElementById("submit");
+const userName = document.getElementById("client-name");
+const userTel = document.getElementById("client-tel");
 
 
-function validate(evt) {
+form.addEventListener("submit", (e) => {
+
+    e.preventDefault()
+    checkInputs();
+});
+
+function checkInputs(){
+    const userNameValue = userName.value.trim();
+    const userTelValue = userTel.value.trim();
+
+    if(userNameValue === '' || /^\s*$/.test(userNameValue)) {
+        userName.classList.toggle("invalid");
+    }else{
+        userName.classList.toggle("valid");
+    }
+
+    if(userTelValue === ''){
+        userTel.classList.toggle("invalid");
+        }else{
+        userTel.classList.toggle("valid");
+    }
+
+    
+}
+/*function validate(evt) {
     if(!userName.value) {
         userName.style.border = "0.125rem solid #FF352B";
-        /*evt.preventDefault();*/
+        vt.preventDefault();
     }else if(/\s/.test(userName)){
         userName.style.border = "0.125rem solid #FF352B";
-        /*evt.preventDefault();*/
+        evt.preventDefault();
     }else{
         userName.style.border= "0.125rem solid #333333";
     }
     if(!userTel.value) {
         userTel.style.border = "0.125rem solid #FF352B";
-        /*evt.preventDefault();*/
+        evt.preventDefault();
     }else if(/\s/.test(userTel)){
         userTel.style.border = "0.125rem solid #FF352B";
-        /*evt.preventDefault();*/
+        evt.preventDefault();
     }else{
         userTel.style.border = "0.125rem solid #333333";
     }
     return true;
 }
-submitInfo.addEventListener("click" , validate);
+submitInfo.addEventListener("click" , validate);*/
 
 
 /*add location (пока наброски)*/ 
@@ -152,9 +152,30 @@ submitInfo.addEventListener("click" , validate);
 а что можно сделать дальше не знаю*/
 
 const cities = document.querySelector(".location__select");
-const cityInput = document.querySelector(".location-city__name");
+const cityInputValue = document.getElementById("addCity").value;
+const newCity = document.createElement("OPTION");
+const newCityValue = document.createTextNode(cityInputValue);
+const push = document.querySelector(".push")
+const cityInput = document.getElementById("addCity");
 
-function addNewInput (){
+
+function addValue(){
+    newCity.appendChild(newCityValue);
+    cities.insertBefore(newCity, cities.firstChild);
+
+}
+
+cityInput.addEventListener("keydown", (e) => {
+    if(e.code === "Enter"){
+        newCity.appendChild(newCityValue);
+        cities.insertBefore(newCity, cities.firstChild);       
+    }else{
+        e.preventDefault();
+    }
+    
+});
+
+/*function addNewInput (){
     let newCity = document.createElement('option');
     newCity.value = cityInput.value.toLowerCase();
     cities.add(newCity);

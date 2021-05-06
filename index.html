@@ -237,8 +237,8 @@
             <div class="wrapper">
                 <p class="make-order__article">Мы перезвоним в течении 10 секунд</p>
                 <div class="make-order__info">
-                    <input class="make-order__name input-info" id="client-name" type="text" required placeholder="Ваше имя">
-                    <input class="make-order__tel input-info" id="client-tel" type="tel" required placeholder="Телефон">
+                    <input class="make-order__name input-info valid" id="client-name" type="text" placeholder="Ваше имя">
+                    <input class="make-order__tel input-info valid" id="client-tel" type="tel"  placeholder="Телефон">
                 </div>
                 <div class="make-order__location">
                     <div class="make-order__location-district">
@@ -256,15 +256,15 @@
                     <div class="make-order__location-city">
                         <h4 class="location-city__subtitle make-order__subtitle font">Укажите город</h4>
                         <select class="location__select" name="cities">
-                            <option id="city" value="мозырь"selected>Мозырь</option>
-                            <option id="city" value="минск">Минск</option>
-                            <option id="city" value="брест">Брест</option>
-                            <option id="city" value="витебск">Витебск</option>
-                            <option id="city" value="гомель">Гомель</option>
-                            <option id="city" value="гродно">Гродно</option>
-                            <option id="city" value="могилев">Могилев</option>
+                            <option value="мозырь"selected>Мозырь</option>
+                            <option value="минск">Минск</option>
+                            <option value="брест">Брест</option>
+                            <option value="витебск">Витебск</option>
+                            <option value="гомель">Гомель</option>
+                            <option value="гродно">Гродно</option>
+                            <option value="могилев">Могилев</option>
                         </select>
-                        <input class="location-city__name input-info" id="addCity" type="text" required placeholder="Добавить город">
+                        <input class="location-city__name input-info" id="addCity" type="text"  placeholder="Добавить город">
                     </div>
                 </div>
                 <div class="make-order__payment-methods">
@@ -311,11 +311,7 @@
                     </div>  
                 </div>
                 <div class="make-order__time-and-button">
-                    <div class="make-order__discount-time" id="countdown">
-                        <span class="hours"></span>
-                        <span class="minutes"></span>
-                        <span class="seconds"></span>
-                    </div>
+                    <div class="make-order__discount-time" id="countdown"></div>
                     <div class="make-order__btn-confirmation">
                         <div class="make-order__button-order">
                             <button type="submit" class="button-order__btn button-btn" id="submit">Заказать со скидкой</button>
