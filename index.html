@@ -243,7 +243,7 @@
                 <div class="make-order__location">
                     <div class="make-order__location-district">
                         <h4 class="location-district__subtitle make-order__subtitle font">Укажите область</h4>
-                        <select class="location__select" name="district">
+                        <select class="location__select location__select-region" name="district">
                             <option class="location__select-example" value="0" disabled selected hidden>Например: Минская</option>
                             <option value="1">Минская</option>
                             <option value="2">Брестская</option>
@@ -255,14 +255,14 @@
                     </div>
                     <div class="make-order__location-city">
                         <h4 class="location-city__subtitle make-order__subtitle font">Укажите город</h4>
-                        <select class="location__select" name="cities">
-                            <option value="мозырь"selected>Мозырь</option>
-                            <option value="минск">Минск</option>
-                            <option value="брест">Брест</option>
-                            <option value="витебск">Витебск</option>
-                            <option value="гомель">Гомель</option>
-                            <option value="гродно">Гродно</option>
-                            <option value="могилев">Могилев</option>
+                        <select class="location__select location__select-cities" name="cities">
+                            <option class="location__options" value="мозырь">Мозырь</option>
+                            <option class="location__options" value="минск">Минск</option>
+                            <option class="location__options" value="брест">Брест</option>
+                            <option class="location__options" value="витебск">Витебск</option>
+                            <option class="location__options" value="гомель">Гомель</option>
+                            <option class="location__options" value="гродно">Гродно</option>
+                            <option class="location__options" value="могилев">Могилев</option>
                         </select>
                         <input class="location-city__name input-info" id="addCity" type="text"  placeholder="Добавить город">
                     </div>
@@ -314,7 +314,7 @@
                     <div class="make-order__discount-time" id="countdown"></div>
                     <div class="make-order__btn-confirmation">
                         <div class="make-order__button-order">
-                            <button type="submit" class="button-order__btn button-btn" id="submit">Заказать со скидкой</button>
+                            <button class="button-order__btn button-btn" id="submit">Заказать со скидкой</button>
                             <div class="button-order__bottom button-border"></div>
                         </div>
                         <div class="make-order__mobile-button">Перезвонить мне</div>
@@ -393,12 +393,10 @@
                 <a class="social-networks__email font" href="mailto:hello@movee.ru">hello@movee.ru</a>
                 <p class="social-networks__share font">Поделиться в соц. сетях</p>
                 <div class="social-networks__vk-fb">
-                    <a href="http://vk.com/share.php?url=URL&title=TITLE&description=DESC&image=IMG_PATH&noparse=true" 
-                    target="_blank" onclick="return Share.me(this);">
+                    <a href="#" onclick="Share.vkontakte('http://127.0.0.1:5500/index.html#', 'Просмотри сайт компании Movee', '', 'Когда переезд в радость')">
                         <img src="/images/vk-big.png" alt="img">
                     </a>
-                    <a href="http://www.facebook.com/sharer/sharer.php?s=100&p%5Btitle%5D=TITLE&p%5Bsummary%5D=DESC&p%5Burl%5D=URL&p%5Bimages%5D%5B0%5D=IMG_PATH" 
-                    target="_blank" onclick="return Share.me(this);">
+                    <a href="#" onclick="Share.facebook('http://127.0.0.1:5500/index.html#', 'Просмотри сайт компании Movee', '' , 'Когда переезд в радость')"> 
                         <img src="/images/facebook-big.png" alt="img">
                     </a>
                 </div>
