@@ -15,6 +15,7 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const slides = document.querySelectorAll('.slider__slides');
 const btn = document.querySelectorAll('.types__cars');
+const dots = document.querySelectorAll('.slider__dots')
 let index = 0;
 
 const activeSlide = number =>{
@@ -31,9 +32,17 @@ const activeBtn = number =>{
     btn[number].classList.add("active");
 }
 
+const activeDot = number =>{
+    for(let dot of dots){
+        dot.classList.remove("active-dot");
+    }
+    dots[number].classList.add("active-dot");
+}
+
 const currentSlide = ind =>{
     activeSlide(ind);
     activeBtn(ind);
+    activeDot(ind);
 }
 
 const nextSlide = () => {
@@ -57,6 +66,18 @@ const prevSlide = () => {
     
 }
 
+dots.forEach((item , indexDot) => {
+    item.addEventListener("click", () => {
+        if(dots.length > slides.length){
+            index = indexDot+2;
+            currentSlide(index)
+        }else{
+            index = indexDot;
+            currentSlide(index);
+        }
+    })
+});
+
 btn.forEach((item , indexBtn) => {
     item.addEventListener("click", () => {
         index = indexBtn;
@@ -66,8 +87,6 @@ btn.forEach((item , indexBtn) => {
 
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
-
-
 
 /*time*/
 
@@ -94,15 +113,23 @@ setInterval(countTime, 1000);
 
 const form = document.getElementById("form");
 const submit = document.getElementById("submit");
+const submitMobile = document.getElementById("submit-mobile");
 const userName = document.getElementById("client-name");
 const userTel = document.getElementById("client-tel");
-
+const confirmationCheckbox = document.querySelector(".confirmation__checkbox");
+const errorMessage = document.querySelector(".confirmation__error-message")
 
 form.addEventListener("submit", (e) => {
-
     e.preventDefault()
-    checkInputs();
 });
+
+submit.addEventListener("click",() =>{
+    checkInputs();
+})
+
+submitMobile.addEventListener("click", () =>{
+    checkInputs();
+})
 
 function checkInputs(){
     const userNameValue = userName.value.trim();
@@ -112,29 +139,39 @@ function checkInputs(){
     userTelValue === '' ? userTel.classList.toggle("invalid") : userTel.classList.remove("invalid");
 }
 
+    confirmationCheckbox.addEventListener("input", () =>{
+        confirmationCheckbox.checked ? errorMessage.style.display ='none' : errorMessage.style.display = 'block';
+    });
 
-/*add location (пока наброски)*/ 
 
+/*add location*/ 
 const cities = document.querySelector(".location__select-cities");
 const newCity = document.createElement("option");
 const cityInput = document.getElementById("addCity");
-const cityInputValue = document.getElementById("addCity").value;
-const newCityValue = document.createTextNode(cityInputValue);
-const citiesOptions = document.querySelector(".location__options");
+const citiesOptions = document.querySelectorAll(".location__options");
 
 cityInput.addEventListener("keydown", (e) => {
     if(e.code === "Enter"){
         e.preventDefault();
-        for(let i = 0; i < cities.length; i++){
-            if(cityInputValue === cities[i].value){
-            cities[i].selected = true;
-            }else{
-            newCity.innerHTML = newCityValue;
-            cities.appendChild(newCity);
-            newCity.selected = true;
+        newCity.value = cityInput.value.toLowerCase();
+        newCity.text = cityInput.value;
+        let newOption = new Option(newCity.text, newCity.value, true, true);
+        cities.append(newOption);
+        cityInput.value = '';
+
+        let listLength = cities.length;
+        for (let i = 0; i < listLength; i++) {
+            for (let j = 0; j < listLength; j++) {
+                if (cities.options[i].value == cities.options[j].value && i != j) {
+                  cities.remove(j);
+                  listLength--;
+                  mainOption = cities.options[i];
+                  mainOption.setAttribute("selected", true);
+                }
             }
         }
-    }
+    }     
+        
 });
 
 

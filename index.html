@@ -188,9 +188,7 @@
                 </div>
                 <p class="slider__car-description-mob">Газель 3 метра / 1,5 тонны </p>
                 <div class="slider__dots-choice">
-                    <span class="slider__dots"></span>
-                    <span class="slider__dots"></span>
-                    <span class="slider__dots"></span>
+                    <span class="slider__dots active-dot"></span>
                     <span class="slider__dots"></span>
                     <span class="slider__dots"></span>
                 </div>
@@ -238,7 +236,7 @@
                 <p class="make-order__article">Мы перезвоним в течении 10 секунд</p>
                 <div class="make-order__info">
                     <input class="make-order__name input-info valid" id="client-name" type="text" placeholder="Ваше имя">
-                    <input class="make-order__tel input-info valid" id="client-tel" type="tel"  placeholder="Телефон">
+                    <input class="make-order__tel input-info valid" id="client-tel" type="tel" placeholder="Телефон">
                 </div>
                 <div class="make-order__location">
                     <div class="make-order__location-district">
@@ -317,11 +315,12 @@
                             <button class="button-order__btn button-btn" id="submit">Заказать со скидкой</button>
                             <div class="button-order__bottom button-border"></div>
                         </div>
-                        <div class="make-order__mobile-button">Перезвонить мне</div>
+                        <div class="make-order__mobile-button" id="submit-mobile">Перезвонить мне</div>
                         <div class="make-order__confirmation">
                             <label>
-                                <input class="confirmation__checkbox" name="data-processing" type="checkbox" value="confirm">
+                                <input class="confirmation__checkbox" name="data-processing" type="checkbox" value="confirm" checked>
                                 <span>Даю согласие на обработку данных</span>
+                                <p class="confirmation__error-message">Дайте согласие на обработку данных</p>
                             </label>
                         </div>
                     </div>

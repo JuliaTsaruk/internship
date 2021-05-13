@@ -743,6 +743,15 @@ button:focus{
     background-color: #F8F8F8
 }
 
+.confirmation__error-message{
+    position: absolute;
+    font-size: 1rem;
+    color:#FF352B;
+    display: none;
+    text-align: center;
+    margin-left: -1rem;
+}
+
 /*map section*/
 
 .map{
@@ -1146,7 +1155,7 @@ button:focus{
         margin-left: 1rem;
     }
 
-    .slider__dots:hover::before{
+    .slider__dots.active-dot::before{
         content: "";
         display: block;
         width: 0.5rem;
@@ -1287,6 +1296,8 @@ button:focus{
     .make-order__confirmation{
         margin: 0.8rem 0 0 0.6rem;
     }
+    
+    
 
     /*map section*/
     .map{
