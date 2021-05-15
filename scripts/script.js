@@ -123,25 +123,21 @@ form.addEventListener("submit", (e) => {
     e.preventDefault()
 });
 
-submit.addEventListener("click",() =>{
-    checkInputs();
-})
+submit.onclick = () => checkInputs();
+submitMobile.onclick = () => checkInputs();
 
-submitMobile.addEventListener("click", () =>{
-    checkInputs();
-})
 
 function checkInputs(){
     const userNameValue = userName.value.trim();
     const userTelValue = userTel.value.trim();
 
-    userNameValue === ''? userName.classList.toggle("invalid") : userName.classList.remove("invalid");
-    userTelValue === '' ? userTel.classList.toggle("invalid") : userTel.classList.remove("invalid");
+    userNameValue === ''? userName.classList.add("invalid") : userName.classList.remove("invalid");
+    userTelValue === '' ? userTel.classList.add("invalid") : userTel.classList.remove("invalid");
 }
 
-    confirmationCheckbox.addEventListener("input", () =>{
-        confirmationCheckbox.checked ? errorMessage.style.display ='none' : errorMessage.style.display = 'block';
-    });
+confirmationCheckbox.addEventListener("input", () =>{
+    confirmationCheckbox.checked ? errorMessage.style.display ='none' : errorMessage.style.display = 'block';
+});
 
 
 /*add location*/ 
@@ -151,6 +147,26 @@ const cityInput = document.getElementById("addCity");
 const citiesOptions = document.querySelectorAll(".location__options");
 
 cityInput.addEventListener("keydown", (e) => {
+    if(e.code === "Enter"){
+        e.preventDefault();
+        newCity.value = cityInput.value.toLowerCase();
+        newCity.text = cityInput.value;
+        for (let i = 0; i < cities.length; i++) {
+            if(cities.options[i].value === newCity.value){
+                let mainOption = cities.options[i];
+                mainOption.setAttribute("selected", true);
+            }else{
+                let newOption = new Option(newCity.text, newCity.value, true, true);
+                cities.append(newOption);
+                cityInput.value = '';
+            }
+        }
+    }
+});
+
+
+
+/*cityInput.addEventListener("keydown", (e) => {
     if(e.code === "Enter"){
         e.preventDefault();
         newCity.value = cityInput.value.toLowerCase();
@@ -172,7 +188,7 @@ cityInput.addEventListener("keydown", (e) => {
         }
     }     
         
-});
+});*/
 
 
 /*share */
