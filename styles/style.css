@@ -58,7 +58,7 @@ button:focus{
 
 .first-section{
     padding: 2rem 0 2.29rem 0;
-    background: url(./images/first-section_man.png) 60%  100% no-repeat, url(./images/first-section_car.png) 86%  50% no-repeat;
+    background: url(../images/first-section_man.png) 60%  100% no-repeat, url(../images/first-section_car.png) 86%  50% no-repeat;
     background-color: hsl(49, 100%, 50%);
 }
 
@@ -207,7 +207,7 @@ button:focus{
 }
 
 .phone-btn_link::after{
-    content: url(./images/phone-img.png);
+    content: url(../images/phone-img.png);
 }
 
 .phone-btn_link:hover {
@@ -389,7 +389,7 @@ button:focus{
     padding-bottom: 1.8rem;
 }
 .slider__car-list li::before{
-    content: url(./images/car-park__list.png);
+    content: url(../images/car-park__list.png);
     padding-right: 1rem;
 }
 
@@ -440,7 +440,7 @@ button:focus{
 }
 
 .clients__date::after{
-    content: url(./images/feedbacks__stars.png);
+    content: url(../images/feedbacks__stars.png);
     padding-left: 0.5rem;
 }
 
@@ -582,7 +582,7 @@ button:focus{
 
 .payment-methods__radio-btn:checked + span::before{
     border-color: #FED100;
-    background-image: url(./images/radio-btn.png);
+    background-image: url(../images/radio-btn.png);
 }
 
 .payment-methods__radio-btn:disabled + span::before{
@@ -652,7 +652,7 @@ button:focus{
 
 .additional-services__checkbox:checked+span::before{
     border-color: #FED100;
-    background-image: url(./images/checkbox.png);
+    background-image: url(../images/checkbox.png);
 }
 
 .additional-services__checkbox:not(:disabled):not(:checked)+span:hover::before{
@@ -736,7 +736,7 @@ button:focus{
 }
 
 .confirmation__checkbox:checked + span::before{
-    background-image: url(./images/car-park__list.png);
+    background-image: url(../images/car-park__list.png);
 }
 
 .confirmation__checkbox:disabled + span::before{
@@ -785,7 +785,7 @@ button:focus{
 }
 
 .movee-info__item::before{
-    content: url(./images/movee-info-list.png);
+    content: url(../images/movee-info-list.png);
     padding-right:1rem;
 }
 
