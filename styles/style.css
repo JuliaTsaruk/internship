@@ -58,7 +58,7 @@ button:focus{
 
 .first-section{
     padding: 2rem 0 2.29rem 0;
-    background: url(/images/first-section_man.png) 60%  100% no-repeat, url(/images/first-section_car.png) 86%  50% no-repeat;
+    background: url(.../images/first-section_man.png) 60%  100% no-repeat, url(.../images/first-section_car.png) 86%  50% no-repeat;
     background-color: hsl(49, 100%, 50%);
 }
 
