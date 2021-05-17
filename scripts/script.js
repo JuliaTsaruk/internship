@@ -111,13 +111,11 @@ const userTel = document.getElementById("client-tel");
 const confirmationCheckbox = document.querySelector(".confirmation__checkbox");
 const errorMessage = document.querySelector(".confirmation__error-message")
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault()
+
+form.addEventListener ("submit", (e) => {
+    e.preventDefault();
+    checkInputs();
 });
-
-submit.onclick = () => checkInputs();
-submitMobile.onclick = () => checkInputs();
-
 
 function checkInputs(){
     const userNameValue = userName.value.trim();
@@ -126,10 +124,6 @@ function checkInputs(){
     userNameValue === ''? userName.classList.add("invalid") : userName.classList.remove("invalid");
     userTelValue === '' ? userTel.classList.add("invalid") : userTel.classList.remove("invalid");
 }
-
-confirmationCheckbox.addEventListener("input", () =>{
-    confirmationCheckbox.checked ? errorMessage.style.display ='none' : errorMessage.style.display = 'block';
-});
 
 
 const cities = document.querySelector(".location__select-cities");

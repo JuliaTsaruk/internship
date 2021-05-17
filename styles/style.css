@@ -1273,7 +1273,7 @@ button:focus{
     }
 
     .make-order__mobile-button{
-        max-width: 18rem;
+        width: 18rem;
         height: 3.75rem;
         background-color: #FF352B;
         display: flex;
@@ -1282,6 +1282,7 @@ button:focus{
         margin: 0 auto;
         color: #F2F2F2;
         font-size: 1.3rem;
+        padding: 1.9rem 2rem;
     }
 
     .make-order__mobile-button:hover{
