@@ -153,42 +153,19 @@ cityInput.addEventListener("keydown", (e) => {
         newCity.text = cityInput.value;
         for (let i = 0; i < cities.length; i++) {
             if(cities.options[i].value === newCity.value){
-                let mainOption = cities.options[i];
-                mainOption.setAttribute("selected", true);
-            }else{
-                let newOption = new Option(newCity.text, newCity.value, true, true);
-                cities.append(newOption);
-                cityInput.value = '';
-            }
-        }
+                cities.options.remove(i);
+            };
+        };
+        let newOption = new Option(newCity.text, newCity.value, true, true);
+        cities.append(newOption);
+        cityInput.value = '';
     }
+    
 });
 
 
 
-/*cityInput.addEventListener("keydown", (e) => {
-    if(e.code === "Enter"){
-        e.preventDefault();
-        newCity.value = cityInput.value.toLowerCase();
-        newCity.text = cityInput.value;
-        let newOption = new Option(newCity.text, newCity.value, true, true);
-        cities.append(newOption);
-        cityInput.value = '';
 
-        let listLength = cities.length;
-        for (let i = 0; i < listLength; i++) {
-            for (let j = 0; j < listLength; j++) {
-                if (cities.options[i].value == cities.options[j].value && i != j) {
-                  cities.remove(j);
-                  listLength--;
-                  mainOption = cities.options[i];
-                  mainOption.setAttribute("selected", true);
-                }
-            }
-        }
-    }     
-        
-});*/
 
 
 /*share */
