@@ -1,5 +1,3 @@
-/*additional menu*/
-
 const showList = document.querySelector('.additional-services__more');
 const servicesList = document.querySelector('.make-order__labels');
 
@@ -8,8 +6,6 @@ showList.addEventListener("click", () => {
     showList.classList.toggle("additional-services__less");
 });
 
-
-/*slider*/
 
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
@@ -88,7 +84,6 @@ btn.forEach((item , indexBtn) => {
 next.addEventListener("click", nextSlide);
 prev.addEventListener("click", prevSlide);
 
-/*time*/
 
 let time = 21600;
 const timeCountdown = document.getElementById("countdown");
@@ -107,9 +102,6 @@ function countTime (){
 
 setInterval(countTime, 1000);
 
-
-
-/*validation*/
 
 const form = document.getElementById("form");
 const submit = document.getElementById("submit");
@@ -140,7 +132,6 @@ confirmationCheckbox.addEventListener("input", () =>{
 });
 
 
-/*add location*/ 
 const cities = document.querySelector(".location__select-cities");
 const newCity = document.createElement("option");
 const cityInput = document.getElementById("addCity");
@@ -163,12 +154,6 @@ cityInput.addEventListener("keydown", (e) => {
     
 });
 
-
-
-
-
-
-/*share */
 
 Share = {
     vkontakte: function(purl, ptitle, pimg, text) {
