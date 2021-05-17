@@ -141,33 +141,59 @@
             <h2 class="car-park__title heading">Автопарк</h2>
             <h3 class="car-park__article small-heading">10 видов автомобилей от 800 кг до 10 тонн</h3>
             <div class="car-park__types">
-                <div class="types__cars font">Газели</div>
+                <div class="types__cars font active">Газели</div>
                 <div class="types__cars font">Каблуки</div>
                 <div class="types__cars font">Грузовики</div>
             </div>
             <div  class="car-park__slider">
-                <img  class="slider__direction"src="/images/car-park_left.png" alt="image">
-                <div class="slider__car-info">
-                    <h3 class="slider__car-title small-heading">Газель 3 метра </h3>
-                    <ul class="slider__car-list">
-                        <li>Ширина 2 м</li>
-                        <li>Высота 2 м</li>
-                        <li>Объем 16 м³</li>
-                        <li>Грузоподъемность 1,5 т</li>
-                    </ul>
-                    <button class="slider__order-button btn font">Заказать</button>
+                <img  class="slider__direction" id="prev" src="/images/car-park_left.png" alt="image">
+                <div class="slider__slides active-slide">
+                    <div class="slider__car-info">
+                        <h3 class="slider__car-title small-heading">Газель 3 метра </h3>
+                        <ul class="slider__car-list">
+                            <li>Ширина 2 м</li>
+                            <li>Высота 2 м</li>
+                            <li>Объем 16 м³</li>
+                            <li>Грузоподъемность 1,5 т</li>
+                        </ul>
+                        <button class="slider__order-button btn font">Заказать</button>
+                    </div>
+                    <img class="slider__car-image" src="/images/car-park_car.png" alt="image">
                 </div>
-                <img class="slider__car-image" src="/images/car-park_car.png" alt="image">
+                <div class="slider__slides">
+                    <div class="slider__car-info">
+                        <h3 class="slider__car-title small-heading">Каблук 2 метра </h3>
+                        <ul class="slider__car-list">
+                            <li>Ширина 1.8 м</li>
+                            <li>Высота 1.2 м</li>
+                            <li>Объем 8 м³</li>
+                            <li>Грузоподъемность 0.8 т</li>
+                        </ul>
+                        <button class="slider__order-button btn font">Заказать</button>
+                    </div>
+                    <img class="slider__car-image" src="/images/slider2.png" alt="image">
+                </div>
+                <div class="slider__slides">
+                    <div class="slider__car-info">
+                        <h3 class="slider__car-title small-heading">Грузовик 3 метра </h3>
+                        <ul class="slider__car-list">
+                            <li>Ширина 3 м</li>
+                            <li>Высота 3 м</li>
+                            <li>Объем 20 м³</li>
+                            <li>Грузоподъемность 2 т</li>
+                        </ul>
+                        <button class="slider__order-button btn font">Заказать</button>
+                    </div>
+                    <img class="slider__car-image" src="/images/slider3.png" alt="image">
+                </div>
                 <p class="slider__car-description-mob">Газель 3 метра / 1,5 тонны </p>
                 <div class="slider__dots-choice">
-                    <span class="slider__dots"></span>
-                    <span class="slider__dots"></span>
-                    <span class="slider__dots"></span>
+                    <span class="slider__dots active-dot"></span>
                     <span class="slider__dots"></span>
                     <span class="slider__dots"></span>
                 </div>
                 <button class="slider__button-mob font btn">Заказать</button>
-                <img  class="slider__direction" src="/images/car-park_right.png" alt="image">
+                <img  class="slider__direction" id="next" src="/images/car-park_right.png" alt="image">
             </div>
         </div>
     </section>
@@ -203,19 +229,19 @@
     </section>
     <section class="make-order">
         <div class="container">
-            <h2 class="make-order__title heading">Закажи  переезд прямо сейчас со скидкой %</h2>
+            <form class="make-order__form" id="form"> 
+                <h2 class="make-order__title heading">Закажи  переезд прямо сейчас со скидкой %</h2>
             <h2 class="make-order__mobile-title font">Закажи  переезд прямо сейчас</h2>
             <div class="wrapper">
                 <p class="make-order__article">Мы перезвоним в течении 10 секунд</p>
                 <div class="make-order__info">
-                    <label></label>
-                    <input class="make-order__name input-info" type="text" required placeholder="Ваше имя">
-                    <input class="make-order__tel input-info" type="tel" required placeholder="Телефон">
+                    <input class="make-order__name input-info valid" id="client-name" type="text" placeholder="Ваше имя">
+                    <input class="make-order__tel input-info valid" id="client-tel" type="tel" placeholder="Телефон">
                 </div>
                 <div class="make-order__location">
                     <div class="make-order__location-district">
                         <h4 class="location-district__subtitle make-order__subtitle font">Укажите область</h4>
-                        <select class="location__select" name="district">
+                        <select class="location__select location__select-region" name="district">
                             <option class="location__select-example" value="0" disabled selected hidden>Например: Минская</option>
                             <option value="1">Минская</option>
                             <option value="2">Брестская</option>
@@ -227,16 +253,16 @@
                     </div>
                     <div class="make-order__location-city">
                         <h4 class="location-city__subtitle make-order__subtitle font">Укажите город</h4>
-                        <select class="location__select" name="cities">
-                            <option value="0"selected>Мозырь</option>
-                            <option value="1">Минск</option>
-                            <option value="2">Брест</option>
-                            <option value="3">Витебск</option>
-                            <option value="4">Гомель</option>
-                            <option value="5">Гродно</option>
-                            <option value="6">Могилев</option>
+                        <select class="location__select location__select-cities" name="cities">
+                            <option class="location__options" value="мозырь">Мозырь</option>
+                            <option class="location__options" value="минск">Минск</option>
+                            <option class="location__options" value="брест">Брест</option>
+                            <option class="location__options" value="витебск">Витебск</option>
+                            <option class="location__options" value="гомель">Гомель</option>
+                            <option class="location__options" value="гродно">Гродно</option>
+                            <option class="location__options" value="могилев">Могилев</option>
                         </select>
-                        <input class="location-city__name input-info" type="text" required placeholder="Добавить город">
+                        <input class="location-city__name input-info" id="addCity" type="text"  placeholder="Добавить город">
                     </div>
                 </div>
                 <div class="make-order__payment-methods">
@@ -255,45 +281,52 @@
                     </label>
                 </div>
                 <div class="make-order__additional-services">
-                    <h4 class="make-order__subtitle font">Дополнительные услуги</h4>
-                    <label class="additional-services__label">
-                        <input class="additional-services__checkbox" name="service" type="checkbox" value="measurer">
-                        <span>Вызов замерщика</span> 
-                    </label>
-                    <label class="additional-services__label">
-                        <input class="additional-services__checkbox" name="service" type="checkbox" value="fragile">
-                        <span>Упаковка для хрупких предметов</span>
-                    </label>
-                    <label class="additional-services__label">
-                        <input class="additional-services__checkbox" name="service" type="checkbox" value="crane">
-                        <span>Кран</span>
-                    </label>
-                    <label class="additional-services__label">
-                        <input class="additional-services__checkbox" name="service" type="checkbox" value="furniture">
-                        <span>Сборка мебели</span>
-                    </label>
-                    <label class="additional-services__label">
-                        <input class="additional-services__checkbox" name="service" type="checkbox" value="oversized">
-                        <span>Крупногабаритные предметы</span>
-                    </label>
+                    <div class="make-order__services">
+                        <h4 class="make-order__subtitle font">Дополнительные услуги</h4>
+                        <div class="additional-services__more"></div>
+                    </div>
+                    <div class="make-order__labels" id="labels">
+                        <label class="additional-services__label">
+                            <input class="additional-services__checkbox" name="service" type="checkbox" value="measurer">
+                            <span>Вызов замерщика</span> 
+                        </label>
+                        <label class="additional-services__label">
+                            <input class="additional-services__checkbox" name="service" type="checkbox" value="fragile">
+                            <span>Упаковка для хрупких предметов</span>
+                        </label>
+                        <label class="additional-services__label">
+                            <input class="additional-services__checkbox" name="service" type="checkbox" value="crane">
+                            <span>Кран</span>
+                        </label>
+                        <label class="additional-services__label">
+                            <input class="additional-services__checkbox" name="service" type="checkbox" value="furniture">
+                            <span>Сборка мебели</span>
+                        </label>
+                        <label class="additional-services__label">
+                            <input class="additional-services__checkbox" name="service" type="checkbox" value="oversized">
+                            <span>Крупногабаритные предметы</span>
+                        </label>
+                    </div>  
                 </div>
                 <div class="make-order__time-and-button">
-                    <div class="make-order__discount-time">05:37:25</div>
+                    <div class="make-order__discount-time" id="countdown"></div>
                     <div class="make-order__btn-confirmation">
                         <div class="make-order__button-order">
-                            <button class="button-order__btn button-btn">Заказать со скидкой</button>
+                            <button class="button-order__btn button-btn" id="submit" type="submit">Заказать со скидкой</button>
                             <div class="button-order__bottom button-border"></div>
                         </div>
-                        <div class="make-order__mobile-button">Перезвонить мне</div>
+                        <button class="make-order__mobile-button" id="submit-mobile" type="submit">Перезвонить мне</button>
                         <div class="make-order__confirmation">
                             <label>
-                                <input class="confirmation__checkbox" name="data-processing" type="checkbox" value="confirm">
+                                <input class="confirmation__checkbox" name="data-processing" type="checkbox" value="confirm" checked required>
                                 <span>Даю согласие на обработку данных</span>
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
+            </form>
+            
         </div>
     </section>
     <section class="map">
@@ -358,10 +391,10 @@
                 <a class="social-networks__email font" href="mailto:hello@movee.ru">hello@movee.ru</a>
                 <p class="social-networks__share font">Поделиться в соц. сетях</p>
                 <div class="social-networks__vk-fb">
-                    <a href="https://vk.com/" target="_blank">
+                    <a href="#" onclick="Share.vkontakte('http://127.0.0.1:5500/index.html#', 'Просмотри сайт компании Movee', '', 'Когда переезд в радость')">
                         <img src="/images/vk-big.png" alt="img">
                     </a>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="#" onclick="Share.facebook('http://127.0.0.1:5500/index.html#', 'Просмотри сайт компании Movee', '' , 'Когда переезд в радость')"> 
                         <img src="/images/facebook-big.png" alt="img">
                     </a>
                 </div>
@@ -373,6 +406,7 @@
             <button class="call__mobile-number btn font">Заказать</button>
         </div>
     </section>
+    <script src="/scripts/script.js"></script>
 </body>
 </html>
 
