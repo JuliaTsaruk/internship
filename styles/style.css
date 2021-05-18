@@ -358,6 +358,7 @@ button:focus{
 .car-park__slider{
     display: flex;
     width: 93%;
+    height: 28rem;
     margin: 0 auto;
     justify-content: space-between;
 }
@@ -374,11 +375,12 @@ button:focus{
 
 .slider__slides.active-slide{
     display: flex;
+    width: 100%;
 }
 
 
 .slider__car-info{
-    margin:3rem 7rem 3rem 3rem;
+    margin:3rem 7rem 3rem 6rem;
 }
 
 .slider__car-title{
@@ -895,10 +897,17 @@ button:focus{
 }
 
 
+@media screen and (min-width: 805px) and (max-width:1200px){
+    .slider__car-info{
+        margin:3rem 1rem 3rem 3rem;
+    }
+    .slider__car-image{
+        max-width: 60%;
+    }
+}
 
 
-
-@media screen and (min-width:200px) and (max-width:800px){
+@media screen and (min-width:200px) and (max-width:850px){
     .container{
         width: 19.25rem;
     }
