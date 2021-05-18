@@ -217,8 +217,6 @@ button:focus{
     background-color: #3d9be9;
   }
 
-  /* how-it-works section*/
-
   .how-it-works{
     padding: 6rem 0 3.4rem 0;
     background-color: #FFFFFF;
@@ -261,7 +259,7 @@ button:focus{
     display: none;
 }
 
-/*section prices*/  
+
 .prices{
     margin-bottom: 6.5rem;
 }
@@ -324,7 +322,6 @@ button:focus{
     display: none;
 }
 
-/*car-park section*/
 
 .car-park__title{
     padding-bottom: 1rem;
@@ -378,7 +375,6 @@ button:focus{
     width: 100%;
 }
 
-
 .slider__car-info{
     margin:3rem 7rem 3rem 6rem;
 }
@@ -409,14 +405,12 @@ button:focus{
     transition: 0.5s;
 }
 
-
 .slider__car-description-mob,
 .slider__dots,
 .slider__button-mob{
     display: none;
 }
 
-/*feedbacks section*/
 .feedbacks{
     background-color: #FED100;
     padding-bottom: 6rem;
@@ -466,7 +460,6 @@ button:focus{
     transition: 0.5s;
 }
 
-/*make-order section*/
 .make-order{
     padding: 7.8rem 0 0 2.5rem;
 }
@@ -517,13 +510,11 @@ button:focus{
     width: 50%;
 }
 
-
 .make-order__location-city{
     width: 50%;
     display: flex;
     flex-direction: column;
 }
-
 
 .make-order__subtitle{
     font-weight: 700;
@@ -617,11 +608,9 @@ button:focus{
     display: none;
 }
 
-
 .show-labels{
     display: block;
 }
-
 
 .additional-services__checkbox{
     position: absolute;
@@ -650,7 +639,6 @@ button:focus{
     background-position: center center;
     background-size: 50% 50%;
 }
-
 
 .additional-services__checkbox:checked+span::before{
     border-color: #FED100;
@@ -754,8 +742,6 @@ button:focus{
     margin-left: -1rem;
 }
 
-/*map section*/
-
 .map{
     position: relative;
     margin-top: 6.5rem;
@@ -805,7 +791,6 @@ button:focus{
     display: none;
 }
 
-/*footer section*/
 .footer{
     background-color: #FED100;
     padding: 6.8rem 0;
@@ -975,7 +960,6 @@ button:focus{
         box-shadow: none;
     }
 
-    /*how-it-works section*/
 
     .how-it-works{
         padding: 0;
@@ -1042,8 +1026,6 @@ button:focus{
     }
 
 
-    /*prices*/
-
     .prices{
         margin: 2.9rem 0 5.7rem 0;
     }
@@ -1096,8 +1078,6 @@ button:focus{
         text-align: center;
         padding-top: 1.3rem;
     }
-    
-    /*car-park section*/
 
     .car-park__title{
         font-size: 1.25rem;
@@ -1186,7 +1166,6 @@ button:focus{
         transition: 0.5s;
     }
 
-    /*feedbacks section*/
 
     .feedbacks{
         padding-bottom: 3rem;
@@ -1238,8 +1217,6 @@ button:focus{
         width: 18.25rem;
         height: 3.75rem;
     }
-
-    /*make-order section*/
 
     .make-order__title,
     .make-order__location,
@@ -1307,9 +1284,6 @@ button:focus{
         margin: 0.8rem 0 0 0.6rem;
     }
     
-    
-
-    /*map section*/
     .map{
         margin-top: 4.2rem;
     }
@@ -1337,7 +1311,6 @@ button:focus{
         border-bottom: 1px solid #333333;
     }
 
-    /*footer section*/
 
     .footer{
         padding: 4rem 0 3.2rem 0;
