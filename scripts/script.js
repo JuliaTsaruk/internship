@@ -64,13 +64,8 @@ const prevSlide = () => {
 
 dots.forEach((item , indexDot) => {
     item.addEventListener("click", () => {
-        if(dots.length > slides.length){
-            index = indexDot+2;
-            currentSlide(index)
-        }else{
-            index = indexDot;
-            currentSlide(index);
-        }
+        index = indexDot;
+        currentSlide(index);
     })
 });
 

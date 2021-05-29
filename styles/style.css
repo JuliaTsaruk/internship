@@ -883,12 +883,37 @@ button:focus{
 
 
 @media screen and (min-width: 805px) and (max-width:1200px){
+    .header_menu{
+        width: 23rem;
+    }
+    .first-section{
+        background: url(../images/first-section_man.png) 70% 100% no-repeat;
+        background-color: hsl(49, 100%, 50%);
+    }
+    .first-section_title{
+        font-size: 3.5rem;
+    }
+    .first-section_article{
+        font-size: 1.5rem;
+    }
+    .first-section_advantages{
+        padding: 7.5rem 2rem 3rem 0;
+        flex-wrap: wrap;
+    }
+    .blue-car{
+        height: 22rem;
+    }
     .slider__car-info{
         margin:3rem 1rem 3rem 3rem;
     }
     .slider__car-image{
         max-width: 60%;
     }
+    .call__number-link{
+        font-size: 1rem;
+        margin: 0 1rem;
+    }
+    
 }
 
 
@@ -1116,7 +1141,7 @@ button:focus{
     }
 
     .slider__car-image{
-        height: 14.19rem;
+        height: 12.19rem;
         padding-left: 0;
         margin: 0 0 1.1rem -0.5rem;
         max-width: 100%;
